@@ -1,8 +1,8 @@
-I1            PASS       79.3s  interface: layout and wire count
-                               control=[0], x=1..n, y=n+1..2n at n=7, n=256 and all 24 built addends; 2311 wires, at most 2311 over addends (reference 2311, cap 4096)
+I1            PASS      118.4s  interface: layout and wire count
+                               control=[0], x=1..n, y=n+1..2n at n=7, n=256 and all 24 built addends; 2347 wires, at most 2347 over addends (reference 2311, cap 4096)
 I2.model      PASS        0.0s  exactness: classical dialog model and iteration bound
                                13 primes: Euclid trace and width schedule exhaustive over x, worst run within bound, multiplier model right on every pair tried; secp256k1 bound 512, 2000 random products
-I2.toy        PASS        0.1s  exactness: exhaustive gate-level check on toy curves and the emitted toy file
+I2.toy        PASS        0.3s  exactness: exhaustive gate-level check on toy curves and the emitted toy file
                                36 toy instances, 25800 lanes, 0 failures (flat circuit, every point, c in {0,1}); emitted verify-out/accept/emit/toy127_circuit.json: 254 lanes, 0 failures
 I2.toy-hier   PASS        0.0s  exactness: same check on the hierarchical upload
                                36 toy instances, 25800 lanes, 0 failures (hierarchical emission expanded by qec/flatten.py's rules); emitted verify-out/accept/emit/toy127_circuit.hier.json: 254 lanes, 0 failures
@@ -10,7 +10,7 @@ I2.components PASS        0.0s  exactness: 256-bit components on boundary inputs
                                49 256-bit components on boundary inputs, 8951 lanes, failing: none
 I2.mutation   PASS        0.0s  exactness: the checker rejects mutated circuits
                                173 of 200 CCX-to-CX demotions caught at the fixed seed, at least 163 required
-I2.secp       PASS      174.8s  exactness: 256-bit hierarchical upload on exceptional and random points
+I2.secp       PASS      192.5s  exactness: 256-bit hierarchical upload on exceptional and random points
                                hierarchical upload expanded by flatten's rules at 24 addends incl. G, 252 lanes each (inf, A, -A, -2A, 2A, 3A and 120 random R, c in {0,1}); 0 failures
 I2.secp-flat  PASS        0.0s  exactness: 256-bit flat circuit at G
                                252 lanes at A = G incl. inf, A, -A, -2A, 2A, 3A; 0 failures
@@ -19,13 +19,12 @@ I3            PASS        0.0s  gate set: X, CX, CCX, SWAP only
 I5            PASS        0.0s  addend independence of definitions
                                all 261 definitions identical over 25 builds; A reaches only the top level
 I6            PASS        0.0s  cost at G and sample statistics over addends (report)
-                               G: 6,421,963 CCX, T 44,953,741, 15,841,541 ops, 2311 wires; sample of 24 addends: max T 44,953,797 (-5,512,192 vs reference 50,465,989), min T 44,953,433; counts match 24 expanded uploads
+                               G: 5,084,258 CCX, T 35,589,806, 14,620,990 ops, 2347 wires; sample of 24 addends: max T 35,589,862 (-14,876,127 vs reference 50,465,989), min T 35,589,498; counts match 24 expanded uploads
 I7            PASS        0.0s  limits: wires and hierarchical upload
-                               2311 of 4096 wires, at most 2311 over 24 addends; hierarchical JSON 33,252,091 bytes for G, at most 33,263,821 over addends, cap 104,857,600
+                               2347 of 4096 wires, at most 2347 over 24 addends; hierarchical JSON 43,675,030 bytes for G, at most 43,686,760 over addends, cap 104,857,600
 I7.charge     PENDING     0.0s  limits: benchmark charge
                                needs the published benchmark: its charge formula is not public yet
 R1            PASS        0.0s  run hygiene: no tracked or unignored file changed
-                               same type, mode and content in all 53 tracked and untracked unignored files before and after
+                               same type, mode and content in all 56 tracked and untracked unignored files before and after
 
-gate PASS: 13 pass, 0 fail, 1 pending ['I7.charge']; 254.3s; verify-out/accept.json
-
+gate PASS: 13 pass, 0 fail, 1 pending ['I7.charge']; 311.3s; verify-out/accept.json

@@ -55,9 +55,9 @@
   "[0x85f184e0b464c554f675299b0c83e786d1711cbd2106119ec40d31b5397a762c]G",
   "[0x2475263c785490146dedc86a9f4fb02bb7a1774f1a42721eaba4c70ee306f0cd]G"
  ],
- "git_head": "6c79f0289a74dcca2b17070385ceae7c0074afab",
+ "git_head": "d8c1190fa586092d547ba189ff796b7d5b18fd8a",
  "python": "3.13.18",
- "seconds": 254.3,
+ "seconds": 311.3,
  "counts": {
   "pass": 13,
   "pending": 1
@@ -82,44 +82,44 @@
    "id": "I1",
    "title": "interface: layout and wire count",
    "status": "pass",
-   "seconds": 79.3,
-   "note": "control=[0], x=1..n, y=n+1..2n at n=7, n=256 and all 24 built addends; 2311 wires, at most 2311 over addends (reference 2311, cap 4096)",
+   "seconds": 118.4,
+   "note": "control=[0], x=1..n, y=n+1..2n at n=7, n=256 and all 24 built addends; 2347 wires, at most 2347 over addends (reference 2311, cap 4096)",
    "evidence": {
     "toy127": {
      "n": 7,
-     "num_wires": 70,
+     "num_wires": 74,
      "file": "verify-out/accept/emit/toy127_circuit.json"
     },
     "secp256k1_G.hier": {
      "n": 256,
-     "num_wires": 2311,
+     "num_wires": 2347,
      "file": "verify-out/accept/emit/secp256k1_G_circuit.hier.json"
     },
     "addend_wires": {
-     "[1]G": 2311,
-     "[2]G": 2311,
-     "[3]G": 2311,
-     "[4]G": 2311,
-     "[5]G": 2311,
-     "[6]G": 2311,
-     "[7]G": 2311,
-     "[8]G": 2311,
-     "[0xf3f49249dc28ff90a5aec7978306d03bf38b2ffc80a4df5a51c9bc701e7ea422]G": 2311,
-     "[0x6bad6be28e7aa6e99f19950499dd251de512148239292d22e255accb1a46688d]G": 2311,
-     "[0x7dabe929c4a334bfc6cd75e9bb049a79d7a7a3cc8c3d5f169293de8fc88b287e]G": 2311,
-     "[0x14aa4e719d3c7dec00a61f933d6c51e370eb9a0a96263ae6c5e818fac0433cc6]G": 2311,
-     "[0xe4163207d094499602f0ee99731c94521919e93ad11745ad498893101c593afe]G": 2311,
-     "[0x59001ac9406329bc65b00a2d35d148805071950eadec6f117d836e77af67d46a]G": 2311,
-     "[0xbef7e268ffe976ab60581ccace1d62e05b4c8012ede7bd0cffb88309fadb8911]G": 2311,
-     "[0x89be9c1c8eb5140f16f4488157241955b91dddd91389b372a341738c837a793e]G": 2311,
-     "[0xb766ff10b437bdb5a51149bbe060a72424114258751b4c8349a047dc4ac87fc9]G": 2311,
-     "[0x7608d9425d111a9d5e6c9992b5fb12e0d9090b89065550964f1a8a1d93d20479]G": 2311,
-     "[0xde0279e17f9ac0988df05f2595f19a51e41686cd66160227173714726c167232]G": 2311,
-     "[0xe01c683e99a46df0dde3a361c0099ebacd73de0081a0ba056ce9da661dcf8855]G": 2311,
-     "[0x90624fe36b82e6c9d82fb0f1423674a6864fa3f3eab06e9b65ed0de47db43056]G": 2311,
-     "[0x93550840067f0cfcce1fd3d9849acfb58350a73f7aac319ffb759e0fed1d9d1f]G": 2311,
-     "[0x85f184e0b464c554f675299b0c83e786d1711cbd2106119ec40d31b5397a762c]G": 2311,
-     "[0x2475263c785490146dedc86a9f4fb02bb7a1774f1a42721eaba4c70ee306f0cd]G": 2311
+     "[1]G": 2347,
+     "[2]G": 2347,
+     "[3]G": 2347,
+     "[4]G": 2347,
+     "[5]G": 2347,
+     "[6]G": 2347,
+     "[7]G": 2347,
+     "[8]G": 2347,
+     "[0xf3f49249dc28ff90a5aec7978306d03bf38b2ffc80a4df5a51c9bc701e7ea422]G": 2347,
+     "[0x6bad6be28e7aa6e99f19950499dd251de512148239292d22e255accb1a46688d]G": 2347,
+     "[0x7dabe929c4a334bfc6cd75e9bb049a79d7a7a3cc8c3d5f169293de8fc88b287e]G": 2347,
+     "[0x14aa4e719d3c7dec00a61f933d6c51e370eb9a0a96263ae6c5e818fac0433cc6]G": 2347,
+     "[0xe4163207d094499602f0ee99731c94521919e93ad11745ad498893101c593afe]G": 2347,
+     "[0x59001ac9406329bc65b00a2d35d148805071950eadec6f117d836e77af67d46a]G": 2347,
+     "[0xbef7e268ffe976ab60581ccace1d62e05b4c8012ede7bd0cffb88309fadb8911]G": 2347,
+     "[0x89be9c1c8eb5140f16f4488157241955b91dddd91389b372a341738c837a793e]G": 2347,
+     "[0xb766ff10b437bdb5a51149bbe060a72424114258751b4c8349a047dc4ac87fc9]G": 2347,
+     "[0x7608d9425d111a9d5e6c9992b5fb12e0d9090b89065550964f1a8a1d93d20479]G": 2347,
+     "[0xde0279e17f9ac0988df05f2595f19a51e41686cd66160227173714726c167232]G": 2347,
+     "[0xe01c683e99a46df0dde3a361c0099ebacd73de0081a0ba056ce9da661dcf8855]G": 2347,
+     "[0x90624fe36b82e6c9d82fb0f1423674a6864fa3f3eab06e9b65ed0de47db43056]G": 2347,
+     "[0x93550840067f0cfcce1fd3d9849acfb58350a73f7aac319ffb759e0fed1d9d1f]G": 2347,
+     "[0x85f184e0b464c554f675299b0c83e786d1711cbd2106119ec40d31b5397a762c]G": 2347,
+     "[0x2475263c785490146dedc86a9f4fb02bb7a1774f1a42721eaba4c70ee306f0cd]G": 2347
     },
     "max_wires": 4096,
     "reference_wires": 2311,
@@ -241,7 +241,7 @@
    "id": "I2.toy",
    "title": "exactness: exhaustive gate-level check on toy curves and the emitted toy file",
    "status": "pass",
-   "seconds": 0.1,
+   "seconds": 0.3,
    "note": "36 toy instances, 25800 lanes, 0 failures (flat circuit, every point, c in {0,1}); emitted verify-out/accept/emit/toy127_circuit.json: 254 lanes, 0 failures",
    "evidence": {
     "exit": 0,
@@ -319,7 +319,7 @@
    "id": "I2.secp",
    "title": "exactness: 256-bit hierarchical upload on exceptional and random points",
    "status": "pass",
-   "seconds": 174.8,
+   "seconds": 192.5,
    "note": "hierarchical upload expanded by flatten's rules at 24 addends incl. G, 252 lanes each (inf, A, -A, -2A, 2A, 3A and 120 random R, c in {0,1}); 0 failures",
    "evidence": {
     "addends": [
@@ -371,12 +371,12 @@
      "q": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2f",
      "addend": "secp256k1 G",
      "n": 256,
-     "wires": 2311,
-     "ops": 15841541,
+     "wires": 2347,
+     "ops": 14620990,
      "counts": {
-      "X": 2238874,
-      "CX": 7180448,
-      "CCX": 6421963,
+      "X": 2116508,
+      "CX": 7419968,
+      "CCX": 5084258,
       "SWAP": 256
      },
      "lanes": 252,
@@ -390,8 +390,8 @@
      ],
      "failures": 0,
      "first_failures": [],
-     "build_seconds": 42.0,
-     "sim_seconds": 7.2
+     "build_seconds": 52.6,
+     "sim_seconds": 7.4
     },
     "lanes_expected": 252,
     "problems": [],
@@ -569,9 +569,9 @@
     ],
     "toy_instances_counted": 36,
     "secp256k1_flat_counts": {
-     "X": 2238874,
-     "CX": 7180448,
-     "CCX": 6421963,
+     "X": 2116508,
+     "CX": 7419968,
+     "CCX": 5084258,
      "SWAP": 256
     },
     "problems": []
@@ -612,33 +612,33 @@
      "[0x2475263c785490146dedc86a9f4fb02bb7a1774f1a42721eaba4c70ee306f0cd]G"
     ],
     "definitions": 261,
-    "digest_of_definitions": "a226294bbac272289c3a8d4c8078c49e889e223886b4a56c9bcaba750c3c3281",
+    "digest_of_definitions": "8975779595062150cf0861624649a9a687e3729441773fd14201c8df96fa0adb",
     "top_level_ccx": {
-     "G via scripts/emit.py": 18123,
-     "[1]G": 18123,
-     "[2]G": 18131,
-     "[3]G": 18131,
-     "[4]G": 18127,
-     "[5]G": 18119,
-     "[6]G": 18099,
-     "[7]G": 18127,
-     "[8]G": 18131,
-     "[0xf3f49249dc28ff90a5aec7978306d03bf38b2ffc80a4df5a51c9bc701e7ea422]G": 18119,
-     "[0x6bad6be28e7aa6e99f19950499dd251de512148239292d22e255accb1a46688d]G": 18107,
-     "[0x7dabe929c4a334bfc6cd75e9bb049a79d7a7a3cc8c3d5f169293de8fc88b287e]G": 18095,
-     "[0x14aa4e719d3c7dec00a61f933d6c51e370eb9a0a96263ae6c5e818fac0433cc6]G": 18103,
-     "[0xe4163207d094499602f0ee99731c94521919e93ad11745ad498893101c593afe]G": 18123,
-     "[0x59001ac9406329bc65b00a2d35d148805071950eadec6f117d836e77af67d46a]G": 18079,
-     "[0xbef7e268ffe976ab60581ccace1d62e05b4c8012ede7bd0cffb88309fadb8911]G": 18123,
-     "[0x89be9c1c8eb5140f16f4488157241955b91dddd91389b372a341738c837a793e]G": 18107,
-     "[0xb766ff10b437bdb5a51149bbe060a72424114258751b4c8349a047dc4ac87fc9]G": 18123,
-     "[0x7608d9425d111a9d5e6c9992b5fb12e0d9090b89065550964f1a8a1d93d20479]G": 18107,
-     "[0xde0279e17f9ac0988df05f2595f19a51e41686cd66160227173714726c167232]G": 18131,
-     "[0xe01c683e99a46df0dde3a361c0099ebacd73de0081a0ba056ce9da661dcf8855]G": 18131,
-     "[0x90624fe36b82e6c9d82fb0f1423674a6864fa3f3eab06e9b65ed0de47db43056]G": 18119,
-     "[0x93550840067f0cfcce1fd3d9849acfb58350a73f7aac319ffb759e0fed1d9d1f]G": 18123,
-     "[0x85f184e0b464c554f675299b0c83e786d1711cbd2106119ec40d31b5397a762c]G": 18111,
-     "[0x2475263c785490146dedc86a9f4fb02bb7a1774f1a42721eaba4c70ee306f0cd]G": 18107
+     "G via scripts/emit.py": 17611,
+     "[1]G": 17611,
+     "[2]G": 17619,
+     "[3]G": 17619,
+     "[4]G": 17615,
+     "[5]G": 17607,
+     "[6]G": 17587,
+     "[7]G": 17615,
+     "[8]G": 17619,
+     "[0xf3f49249dc28ff90a5aec7978306d03bf38b2ffc80a4df5a51c9bc701e7ea422]G": 17607,
+     "[0x6bad6be28e7aa6e99f19950499dd251de512148239292d22e255accb1a46688d]G": 17595,
+     "[0x7dabe929c4a334bfc6cd75e9bb049a79d7a7a3cc8c3d5f169293de8fc88b287e]G": 17583,
+     "[0x14aa4e719d3c7dec00a61f933d6c51e370eb9a0a96263ae6c5e818fac0433cc6]G": 17591,
+     "[0xe4163207d094499602f0ee99731c94521919e93ad11745ad498893101c593afe]G": 17611,
+     "[0x59001ac9406329bc65b00a2d35d148805071950eadec6f117d836e77af67d46a]G": 17567,
+     "[0xbef7e268ffe976ab60581ccace1d62e05b4c8012ede7bd0cffb88309fadb8911]G": 17611,
+     "[0x89be9c1c8eb5140f16f4488157241955b91dddd91389b372a341738c837a793e]G": 17595,
+     "[0xb766ff10b437bdb5a51149bbe060a72424114258751b4c8349a047dc4ac87fc9]G": 17611,
+     "[0x7608d9425d111a9d5e6c9992b5fb12e0d9090b89065550964f1a8a1d93d20479]G": 17595,
+     "[0xde0279e17f9ac0988df05f2595f19a51e41686cd66160227173714726c167232]G": 17619,
+     "[0xe01c683e99a46df0dde3a361c0099ebacd73de0081a0ba056ce9da661dcf8855]G": 17619,
+     "[0x90624fe36b82e6c9d82fb0f1423674a6864fa3f3eab06e9b65ed0de47db43056]G": 17607,
+     "[0x93550840067f0cfcce1fd3d9849acfb58350a73f7aac319ffb759e0fed1d9d1f]G": 17611,
+     "[0x85f184e0b464c554f675299b0c83e786d1711cbd2106119ec40d31b5397a762c]G": 17599,
+     "[0x2475263c785490146dedc86a9f4fb02bb7a1774f1a42721eaba4c70ee306f0cd]G": 17595
     },
     "differences": []
    }
@@ -648,20 +648,20 @@
    "title": "cost at G and sample statistics over addends (report)",
    "status": "pass",
    "seconds": 0.0,
-   "note": "G: 6,421,963 CCX, T 44,953,741, 15,841,541 ops, 2311 wires; sample of 24 addends: max T 44,953,797 (-5,512,192 vs reference 50,465,989), min T 44,953,433; counts match 24 expanded uploads",
+   "note": "G: 5,084,258 CCX, T 35,589,806, 14,620,990 ops, 2347 wires; sample of 24 addends: max T 35,589,862 (-14,876,127 vs reference 50,465,989), min T 35,589,498; counts match 24 expanded uploads",
    "evidence": {
     "t_per_ccx": 7,
     "seed": 2026,
     "random_addends": 16,
     "per_addend": {
      "[1]G": {
-      "num_wires": 2311,
-      "bytes": 33252091,
+      "num_wires": 2347,
+      "bytes": 43675030,
       "gates": {
-       "CCX": 6421963,
-       "CX": 7180448,
+       "CCX": 5084258,
+       "CX": 7419968,
        "SWAP": 256,
-       "X": 2238874
+       "X": 2116508
       },
       "gate_names_seen": [
        "CCX",
@@ -669,21 +669,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841541,
-      "ccx": 6421963,
-      "t": 44953741,
-      "top_ops": 37917,
-      "top_ccx": 18123,
+      "ops": 14620990,
+      "ccx": 5084258,
+      "t": 35589806,
+      "top_ops": 36893,
+      "top_ccx": 17611,
       "definitions": 261
      },
      "[2]G": {
-      "num_wires": 2311,
-      "bytes": 33243660,
+      "num_wires": 2347,
+      "bytes": 43666599,
       "gates": {
-       "CCX": 6421971,
-       "CX": 7180133,
+       "CCX": 5084266,
+       "CX": 7419653,
        "SWAP": 256,
-       "X": 2239018
+       "X": 2116652
       },
       "gate_names_seen": [
        "CCX",
@@ -691,21 +691,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841378,
-      "ccx": 6421971,
-      "t": 44953797,
-      "top_ops": 37754,
-      "top_ccx": 18131,
+      "ops": 14620827,
+      "ccx": 5084266,
+      "t": 35589862,
+      "top_ops": 36730,
+      "top_ccx": 17619,
       "definitions": 261
      },
      "[3]G": {
-      "num_wires": 2311,
-      "bytes": 33251478,
+      "num_wires": 2347,
+      "bytes": 43674417,
       "gates": {
-       "CCX": 6421971,
-       "CX": 7180302,
+       "CCX": 5084266,
+       "CX": 7419822,
        "SWAP": 256,
-       "X": 2239070
+       "X": 2116704
       },
       "gate_names_seen": [
        "CCX",
@@ -713,21 +713,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841599,
-      "ccx": 6421971,
-      "t": 44953797,
-      "top_ops": 37975,
-      "top_ccx": 18131,
+      "ops": 14621048,
+      "ccx": 5084266,
+      "t": 35589862,
+      "top_ops": 36951,
+      "top_ccx": 17619,
       "definitions": 261
      },
      "[4]G": {
-      "num_wires": 2311,
-      "bytes": 33238018,
+      "num_wires": 2347,
+      "bytes": 43660957,
       "gates": {
-       "CCX": 6421967,
-       "CX": 7179947,
+       "CCX": 5084262,
+       "CX": 7419467,
        "SWAP": 256,
-       "X": 2239096
+       "X": 2116730
       },
       "gate_names_seen": [
        "CCX",
@@ -735,21 +735,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841266,
-      "ccx": 6421967,
-      "t": 44953769,
-      "top_ops": 37642,
-      "top_ccx": 18127,
+      "ops": 14620715,
+      "ccx": 5084262,
+      "t": 35589834,
+      "top_ops": 36618,
+      "top_ccx": 17615,
       "definitions": 261
      },
      "[5]G": {
-      "num_wires": 2311,
-      "bytes": 33246215,
+      "num_wires": 2347,
+      "bytes": 43669154,
       "gates": {
-       "CCX": 6421959,
-       "CX": 7180230,
+       "CCX": 5084254,
+       "CX": 7419750,
        "SWAP": 256,
-       "X": 2238992
+       "X": 2116626
       },
       "gate_names_seen": [
        "CCX",
@@ -757,21 +757,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841437,
-      "ccx": 6421959,
-      "t": 44953713,
-      "top_ops": 37813,
-      "top_ccx": 18119,
+      "ops": 14620886,
+      "ccx": 5084254,
+      "t": 35589778,
+      "top_ops": 36789,
+      "top_ccx": 17607,
       "definitions": 261
      },
      "[6]G": {
-      "num_wires": 2311,
-      "bytes": 33241942,
+      "num_wires": 2347,
+      "bytes": 43664881,
       "gates": {
-       "CCX": 6421939,
-       "CX": 7180138,
+       "CCX": 5084234,
+       "CX": 7419658,
        "SWAP": 256,
-       "X": 2239014
+       "X": 2116648
       },
       "gate_names_seen": [
        "CCX",
@@ -779,21 +779,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841347,
-      "ccx": 6421939,
-      "t": 44953573,
-      "top_ops": 37723,
-      "top_ccx": 18099,
+      "ops": 14620796,
+      "ccx": 5084234,
+      "t": 35589638,
+      "top_ops": 36699,
+      "top_ccx": 17587,
       "definitions": 261
      },
      "[7]G": {
-      "num_wires": 2311,
-      "bytes": 33257764,
+      "num_wires": 2347,
+      "bytes": 43680703,
       "gates": {
-       "CCX": 6421967,
-       "CX": 7180621,
+       "CCX": 5084262,
+       "CX": 7420141,
        "SWAP": 256,
-       "X": 2238820
+       "X": 2116454
       },
       "gate_names_seen": [
        "CCX",
@@ -801,21 +801,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841664,
-      "ccx": 6421967,
-      "t": 44953769,
-      "top_ops": 38040,
-      "top_ccx": 18127,
+      "ops": 14621113,
+      "ccx": 5084262,
+      "t": 35589834,
+      "top_ops": 37016,
+      "top_ccx": 17615,
       "definitions": 261
      },
      "[8]G": {
-      "num_wires": 2311,
-      "bytes": 33250139,
+      "num_wires": 2347,
+      "bytes": 43673078,
       "gates": {
-       "CCX": 6421971,
-       "CX": 7180337,
+       "CCX": 5084266,
+       "CX": 7419857,
        "SWAP": 256,
-       "X": 2238958
+       "X": 2116592
       },
       "gate_names_seen": [
        "CCX",
@@ -823,21 +823,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841522,
-      "ccx": 6421971,
-      "t": 44953797,
-      "top_ops": 37898,
-      "top_ccx": 18131,
+      "ops": 14620971,
+      "ccx": 5084266,
+      "t": 35589862,
+      "top_ops": 36874,
+      "top_ccx": 17619,
       "definitions": 261
      },
      "[0xf3f49249dc28ff90a5aec7978306d03bf38b2ffc80a4df5a51c9bc701e7ea422]G": {
-      "num_wires": 2311,
-      "bytes": 33254617,
+      "num_wires": 2347,
+      "bytes": 43677556,
       "gates": {
-       "CCX": 6421959,
-       "CX": 7180459,
+       "CCX": 5084254,
+       "CX": 7419979,
        "SWAP": 256,
-       "X": 2238972
+       "X": 2116606
       },
       "gate_names_seen": [
        "CCX",
@@ -845,21 +845,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841646,
-      "ccx": 6421959,
-      "t": 44953713,
-      "top_ops": 38022,
-      "top_ccx": 18119,
+      "ops": 14621095,
+      "ccx": 5084254,
+      "t": 35589778,
+      "top_ops": 36998,
+      "top_ccx": 17607,
       "definitions": 261
      },
      "[0x6bad6be28e7aa6e99f19950499dd251de512148239292d22e255accb1a46688d]G": {
-      "num_wires": 2311,
-      "bytes": 33247201,
+      "num_wires": 2347,
+      "bytes": 43670140,
       "gates": {
-       "CCX": 6421947,
-       "CX": 7180324,
+       "CCX": 5084242,
+       "CX": 7419844,
        "SWAP": 256,
-       "X": 2238910
+       "X": 2116544
       },
       "gate_names_seen": [
        "CCX",
@@ -867,21 +867,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841437,
-      "ccx": 6421947,
-      "t": 44953629,
-      "top_ops": 37813,
-      "top_ccx": 18107,
+      "ops": 14620886,
+      "ccx": 5084242,
+      "t": 35589694,
+      "top_ops": 36789,
+      "top_ccx": 17595,
       "definitions": 261
      },
      "[0x7dabe929c4a334bfc6cd75e9bb049a79d7a7a3cc8c3d5f169293de8fc88b287e]G": {
-      "num_wires": 2311,
-      "bytes": 33242607,
+      "num_wires": 2347,
+      "bytes": 43665546,
       "gates": {
-       "CCX": 6421935,
-       "CX": 7180200,
+       "CCX": 5084230,
+       "CX": 7419720,
        "SWAP": 256,
-       "X": 2238948
+       "X": 2116582
       },
       "gate_names_seen": [
        "CCX",
@@ -889,21 +889,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841339,
-      "ccx": 6421935,
-      "t": 44953545,
-      "top_ops": 37715,
-      "top_ccx": 18095,
+      "ops": 14620788,
+      "ccx": 5084230,
+      "t": 35589610,
+      "top_ops": 36691,
+      "top_ccx": 17583,
       "definitions": 261
      },
      "[0x14aa4e719d3c7dec00a61f933d6c51e370eb9a0a96263ae6c5e818fac0433cc6]G": {
-      "num_wires": 2311,
-      "bytes": 33263821,
+      "num_wires": 2347,
+      "bytes": 43686760,
       "gates": {
-       "CCX": 6421943,
-       "CX": 7180727,
+       "CCX": 5084238,
+       "CX": 7420247,
        "SWAP": 256,
-       "X": 2238956
+       "X": 2116590
       },
       "gate_names_seen": [
        "CCX",
@@ -911,21 +911,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841882,
-      "ccx": 6421943,
-      "t": 44953601,
-      "top_ops": 38258,
-      "top_ccx": 18103,
+      "ops": 14621331,
+      "ccx": 5084238,
+      "t": 35589666,
+      "top_ops": 37234,
+      "top_ccx": 17591,
       "definitions": 261
      },
      "[0xe4163207d094499602f0ee99731c94521919e93ad11745ad498893101c593afe]G": {
-      "num_wires": 2311,
-      "bytes": 33255755,
+      "num_wires": 2347,
+      "bytes": 43678694,
       "gates": {
-       "CCX": 6421963,
-       "CX": 7180481,
+       "CCX": 5084258,
+       "CX": 7420001,
        "SWAP": 256,
-       "X": 2238974
+       "X": 2116608
       },
       "gate_names_seen": [
        "CCX",
@@ -933,21 +933,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841674,
-      "ccx": 6421963,
-      "t": 44953741,
-      "top_ops": 38050,
-      "top_ccx": 18123,
+      "ops": 14621123,
+      "ccx": 5084258,
+      "t": 35589806,
+      "top_ops": 37026,
+      "top_ccx": 17611,
       "definitions": 261
      },
      "[0x59001ac9406329bc65b00a2d35d148805071950eadec6f117d836e77af67d46a]G": {
-      "num_wires": 2311,
-      "bytes": 33245542,
+      "num_wires": 2347,
+      "bytes": 43668481,
       "gates": {
-       "CCX": 6421919,
-       "CX": 7180289,
+       "CCX": 5084214,
+       "CX": 7419809,
        "SWAP": 256,
-       "X": 2238960
+       "X": 2116594
       },
       "gate_names_seen": [
        "CCX",
@@ -955,21 +955,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841424,
-      "ccx": 6421919,
-      "t": 44953433,
-      "top_ops": 37800,
-      "top_ccx": 18079,
+      "ops": 14620873,
+      "ccx": 5084214,
+      "t": 35589498,
+      "top_ops": 36776,
+      "top_ccx": 17567,
       "definitions": 261
      },
      "[0xbef7e268ffe976ab60581ccace1d62e05b4c8012ede7bd0cffb88309fadb8911]G": {
-      "num_wires": 2311,
-      "bytes": 33230807,
+      "num_wires": 2347,
+      "bytes": 43653746,
       "gates": {
-       "CCX": 6421963,
-       "CX": 7179863,
+       "CCX": 5084258,
+       "CX": 7419383,
        "SWAP": 256,
-       "X": 2238942
+       "X": 2116576
       },
       "gate_names_seen": [
        "CCX",
@@ -977,21 +977,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841024,
-      "ccx": 6421963,
-      "t": 44953741,
-      "top_ops": 37400,
-      "top_ccx": 18123,
+      "ops": 14620473,
+      "ccx": 5084258,
+      "t": 35589806,
+      "top_ops": 36376,
+      "top_ccx": 17611,
       "definitions": 261
      },
      "[0x89be9c1c8eb5140f16f4488157241955b91dddd91389b372a341738c837a793e]G": {
-      "num_wires": 2311,
-      "bytes": 33242491,
+      "num_wires": 2347,
+      "bytes": 43665430,
       "gates": {
-       "CCX": 6421947,
-       "CX": 7180199,
+       "CCX": 5084242,
+       "CX": 7419719,
        "SWAP": 256,
-       "X": 2238916
+       "X": 2116550
       },
       "gate_names_seen": [
        "CCX",
@@ -999,21 +999,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841318,
-      "ccx": 6421947,
-      "t": 44953629,
-      "top_ops": 37694,
-      "top_ccx": 18107,
+      "ops": 14620767,
+      "ccx": 5084242,
+      "t": 35589694,
+      "top_ops": 36670,
+      "top_ccx": 17595,
       "definitions": 261
      },
      "[0xb766ff10b437bdb5a51149bbe060a72424114258751b4c8349a047dc4ac87fc9]G": {
-      "num_wires": 2311,
-      "bytes": 33248801,
+      "num_wires": 2347,
+      "bytes": 43671740,
       "gates": {
-       "CCX": 6421963,
-       "CX": 7180385,
+       "CCX": 5084258,
+       "CX": 7419905,
        "SWAP": 256,
-       "X": 2238840
+       "X": 2116474
       },
       "gate_names_seen": [
        "CCX",
@@ -1021,21 +1021,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841444,
-      "ccx": 6421963,
-      "t": 44953741,
-      "top_ops": 37820,
-      "top_ccx": 18123,
+      "ops": 14620893,
+      "ccx": 5084258,
+      "t": 35589806,
+      "top_ops": 36796,
+      "top_ccx": 17611,
       "definitions": 261
      },
      "[0x7608d9425d111a9d5e6c9992b5fb12e0d9090b89065550964f1a8a1d93d20479]G": {
-      "num_wires": 2311,
-      "bytes": 33258627,
+      "num_wires": 2347,
+      "bytes": 43681566,
       "gates": {
-       "CCX": 6421947,
-       "CX": 7180619,
+       "CCX": 5084242,
+       "CX": 7420139,
        "SWAP": 256,
-       "X": 2238910
+       "X": 2116544
       },
       "gate_names_seen": [
        "CCX",
@@ -1043,21 +1043,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841732,
-      "ccx": 6421947,
-      "t": 44953629,
-      "top_ops": 38108,
-      "top_ccx": 18107,
+      "ops": 14621181,
+      "ccx": 5084242,
+      "t": 35589694,
+      "top_ops": 37084,
+      "top_ccx": 17595,
       "definitions": 261
      },
      "[0xde0279e17f9ac0988df05f2595f19a51e41686cd66160227173714726c167232]G": {
-      "num_wires": 2311,
-      "bytes": 33260755,
+      "num_wires": 2347,
+      "bytes": 43683694,
       "gates": {
-       "CCX": 6421971,
-       "CX": 7180665,
+       "CCX": 5084266,
+       "CX": 7420185,
        "SWAP": 256,
-       "X": 2238862
+       "X": 2116496
       },
       "gate_names_seen": [
        "CCX",
@@ -1065,21 +1065,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841754,
-      "ccx": 6421971,
-      "t": 44953797,
-      "top_ops": 38130,
-      "top_ccx": 18131,
+      "ops": 14621203,
+      "ccx": 5084266,
+      "t": 35589862,
+      "top_ops": 37106,
+      "top_ccx": 17619,
       "definitions": 261
      },
      "[0xe01c683e99a46df0dde3a361c0099ebacd73de0081a0ba056ce9da661dcf8855]G": {
-      "num_wires": 2311,
-      "bytes": 33246606,
+      "num_wires": 2347,
+      "bytes": 43669545,
       "gates": {
-       "CCX": 6421971,
-       "CX": 7180206,
+       "CCX": 5084266,
+       "CX": 7419726,
        "SWAP": 256,
-       "X": 2239024
+       "X": 2116658
       },
       "gate_names_seen": [
        "CCX",
@@ -1087,21 +1087,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841457,
-      "ccx": 6421971,
-      "t": 44953797,
-      "top_ops": 37833,
-      "top_ccx": 18131,
+      "ops": 14620906,
+      "ccx": 5084266,
+      "t": 35589862,
+      "top_ops": 36809,
+      "top_ccx": 17619,
       "definitions": 261
      },
      "[0x90624fe36b82e6c9d82fb0f1423674a6864fa3f3eab06e9b65ed0de47db43056]G": {
-      "num_wires": 2311,
-      "bytes": 33233676,
+      "num_wires": 2347,
+      "bytes": 43656615,
       "gates": {
-       "CCX": 6421959,
-       "CX": 7179962,
+       "CCX": 5084254,
+       "CX": 7419482,
        "SWAP": 256,
-       "X": 2238906
+       "X": 2116540
       },
       "gate_names_seen": [
        "CCX",
@@ -1109,21 +1109,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841083,
-      "ccx": 6421959,
-      "t": 44953713,
-      "top_ops": 37459,
-      "top_ccx": 18119,
+      "ops": 14620532,
+      "ccx": 5084254,
+      "t": 35589778,
+      "top_ops": 36435,
+      "top_ccx": 17607,
       "definitions": 261
      },
      "[0x93550840067f0cfcce1fd3d9849acfb58350a73f7aac319ffb759e0fed1d9d1f]G": {
-      "num_wires": 2311,
-      "bytes": 33248565,
+      "num_wires": 2347,
+      "bytes": 43671504,
       "gates": {
-       "CCX": 6421963,
-       "CX": 7180263,
+       "CCX": 5084258,
+       "CX": 7419783,
        "SWAP": 256,
-       "X": 2239032
+       "X": 2116666
       },
       "gate_names_seen": [
        "CCX",
@@ -1131,21 +1131,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841514,
-      "ccx": 6421963,
-      "t": 44953741,
-      "top_ops": 37890,
-      "top_ccx": 18123,
+      "ops": 14620963,
+      "ccx": 5084258,
+      "t": 35589806,
+      "top_ops": 36866,
+      "top_ccx": 17611,
       "definitions": 261
      },
      "[0x85f184e0b464c554f675299b0c83e786d1711cbd2106119ec40d31b5397a762c]G": {
-      "num_wires": 2311,
-      "bytes": 33256561,
+      "num_wires": 2347,
+      "bytes": 43679500,
       "gates": {
-       "CCX": 6421951,
-       "CX": 7180442,
+       "CCX": 5084246,
+       "CX": 7419962,
        "SWAP": 256,
-       "X": 2239102
+       "X": 2116736
       },
       "gate_names_seen": [
        "CCX",
@@ -1153,21 +1153,21 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841751,
-      "ccx": 6421951,
-      "t": 44953657,
-      "top_ops": 38127,
-      "top_ccx": 18111,
+      "ops": 14621200,
+      "ccx": 5084246,
+      "t": 35589722,
+      "top_ops": 37103,
+      "top_ccx": 17599,
       "definitions": 261
      },
      "[0x2475263c785490146dedc86a9f4fb02bb7a1774f1a42721eaba4c70ee306f0cd]G": {
-      "num_wires": 2311,
-      "bytes": 33244785,
+      "num_wires": 2347,
+      "bytes": 43667724,
       "gates": {
-       "CCX": 6421947,
-       "CX": 7180314,
+       "CCX": 5084242,
+       "CX": 7419834,
        "SWAP": 256,
-       "X": 2238826
+       "X": 2116460
       },
       "gate_names_seen": [
        "CCX",
@@ -1175,23 +1175,23 @@
        "SWAP",
        "X"
       ],
-      "ops": 15841343,
-      "ccx": 6421947,
-      "t": 44953629,
-      "top_ops": 37719,
-      "top_ccx": 18107,
+      "ops": 14620792,
+      "ccx": 5084242,
+      "t": 35589694,
+      "top_ops": 36695,
+      "top_ccx": 17595,
       "definitions": 261
      }
     },
     "sample_max": {
      "addend": "[2]G",
-     "num_wires": 2311,
-     "bytes": 33243660,
+     "num_wires": 2347,
+     "bytes": 43666599,
      "gates": {
-      "CCX": 6421971,
-      "CX": 7180133,
+      "CCX": 5084266,
+      "CX": 7419653,
       "SWAP": 256,
-      "X": 2239018
+      "X": 2116652
      },
      "gate_names_seen": [
       "CCX",
@@ -1199,22 +1199,22 @@
       "SWAP",
       "X"
      ],
-     "ops": 15841378,
-     "ccx": 6421971,
-     "t": 44953797,
-     "top_ops": 37754,
-     "top_ccx": 18131,
+     "ops": 14620827,
+     "ccx": 5084266,
+     "t": 35589862,
+     "top_ops": 36730,
+     "top_ccx": 17619,
      "definitions": 261
     },
     "sample_min": {
      "addend": "[0x59001ac9406329bc65b00a2d35d148805071950eadec6f117d836e77af67d46a]G",
-     "num_wires": 2311,
-     "bytes": 33245542,
+     "num_wires": 2347,
+     "bytes": 43668481,
      "gates": {
-      "CCX": 6421919,
-      "CX": 7180289,
+      "CCX": 5084214,
+      "CX": 7419809,
       "SWAP": 256,
-      "X": 2238960
+      "X": 2116594
      },
      "gate_names_seen": [
       "CCX",
@@ -1222,373 +1222,373 @@
       "SWAP",
       "X"
      ],
-     "ops": 15841424,
-     "ccx": 6421919,
-     "t": 44953433,
-     "top_ops": 37800,
-     "top_ccx": 18079,
+     "ops": 14620873,
+     "ccx": 5084214,
+     "t": 35589498,
+     "top_ops": 36776,
+     "top_ccx": 17567,
      "definitions": 261
     },
     "reference_sample_max_t": 50465989,
-    "sample_max_t_delta_vs_reference": -5512192,
+    "sample_max_t_delta_vs_reference": -14876127,
     "count_cross_checks": {
      "[1]G": {
       "counted": {
-       "CCX": 6421963,
-       "CX": 7180448,
+       "CCX": 5084258,
+       "CX": 7419968,
        "SWAP": 256,
-       "X": 2238874
+       "X": 2116508
       },
       "expanded": {
-       "X": 2238874,
-       "CX": 7180448,
-       "CCX": 6421963,
+       "X": 2116508,
+       "CX": 7419968,
+       "CCX": 5084258,
        "SWAP": 256
       }
      },
      "[3]G": {
       "counted": {
-       "CCX": 6421971,
-       "CX": 7180302,
+       "CCX": 5084266,
+       "CX": 7419822,
        "SWAP": 256,
-       "X": 2239070
+       "X": 2116704
       },
       "expanded": {
-       "X": 2239070,
-       "CX": 7180302,
-       "CCX": 6421971,
+       "X": 2116704,
+       "CX": 7419822,
+       "CCX": 5084266,
        "SWAP": 256
       }
      },
      "[5]G": {
       "counted": {
-       "CCX": 6421959,
-       "CX": 7180230,
+       "CCX": 5084254,
+       "CX": 7419750,
        "SWAP": 256,
-       "X": 2238992
+       "X": 2116626
       },
       "expanded": {
-       "X": 2238992,
-       "CX": 7180230,
-       "CCX": 6421959,
+       "X": 2116626,
+       "CX": 7419750,
+       "CCX": 5084254,
        "SWAP": 256
       }
      },
      "[7]G": {
       "counted": {
-       "CCX": 6421967,
-       "CX": 7180621,
+       "CCX": 5084262,
+       "CX": 7420141,
        "SWAP": 256,
-       "X": 2238820
+       "X": 2116454
       },
       "expanded": {
-       "X": 2238820,
-       "CX": 7180621,
-       "CCX": 6421967,
+       "X": 2116454,
+       "CX": 7420141,
+       "CCX": 5084262,
        "SWAP": 256
       }
      },
      "[0xf3f49249dc28ff90a5aec7978306d03bf38b2ffc80a4df5a51c9bc701e7ea422]G": {
       "counted": {
-       "CCX": 6421959,
-       "CX": 7180459,
+       "CCX": 5084254,
+       "CX": 7419979,
        "SWAP": 256,
-       "X": 2238972
+       "X": 2116606
       },
       "expanded": {
-       "X": 2238972,
-       "CX": 7180459,
-       "CCX": 6421959,
+       "X": 2116606,
+       "CX": 7419979,
+       "CCX": 5084254,
        "SWAP": 256
       }
      },
      "[0x7dabe929c4a334bfc6cd75e9bb049a79d7a7a3cc8c3d5f169293de8fc88b287e]G": {
       "counted": {
-       "CCX": 6421935,
-       "CX": 7180200,
+       "CCX": 5084230,
+       "CX": 7419720,
        "SWAP": 256,
-       "X": 2238948
+       "X": 2116582
       },
       "expanded": {
-       "X": 2238948,
-       "CX": 7180200,
-       "CCX": 6421935,
+       "X": 2116582,
+       "CX": 7419720,
+       "CCX": 5084230,
        "SWAP": 256
       }
      },
      "[0xe4163207d094499602f0ee99731c94521919e93ad11745ad498893101c593afe]G": {
       "counted": {
-       "CCX": 6421963,
-       "CX": 7180481,
+       "CCX": 5084258,
+       "CX": 7420001,
        "SWAP": 256,
-       "X": 2238974
+       "X": 2116608
       },
       "expanded": {
-       "X": 2238974,
-       "CX": 7180481,
-       "CCX": 6421963,
+       "X": 2116608,
+       "CX": 7420001,
+       "CCX": 5084258,
        "SWAP": 256
       }
      },
      "[0xbef7e268ffe976ab60581ccace1d62e05b4c8012ede7bd0cffb88309fadb8911]G": {
       "counted": {
-       "CCX": 6421963,
-       "CX": 7179863,
+       "CCX": 5084258,
+       "CX": 7419383,
        "SWAP": 256,
-       "X": 2238942
+       "X": 2116576
       },
       "expanded": {
-       "X": 2238942,
-       "CX": 7179863,
-       "CCX": 6421963,
+       "X": 2116576,
+       "CX": 7419383,
+       "CCX": 5084258,
        "SWAP": 256
       }
      },
      "[0xb766ff10b437bdb5a51149bbe060a72424114258751b4c8349a047dc4ac87fc9]G": {
       "counted": {
-       "CCX": 6421963,
-       "CX": 7180385,
+       "CCX": 5084258,
+       "CX": 7419905,
        "SWAP": 256,
-       "X": 2238840
+       "X": 2116474
       },
       "expanded": {
-       "X": 2238840,
-       "CX": 7180385,
-       "CCX": 6421963,
+       "X": 2116474,
+       "CX": 7419905,
+       "CCX": 5084258,
        "SWAP": 256
       }
      },
      "[0xde0279e17f9ac0988df05f2595f19a51e41686cd66160227173714726c167232]G": {
       "counted": {
-       "CCX": 6421971,
-       "CX": 7180665,
+       "CCX": 5084266,
+       "CX": 7420185,
        "SWAP": 256,
-       "X": 2238862
+       "X": 2116496
       },
       "expanded": {
-       "X": 2238862,
-       "CX": 7180665,
-       "CCX": 6421971,
+       "X": 2116496,
+       "CX": 7420185,
+       "CCX": 5084266,
        "SWAP": 256
       }
      },
      "[0x90624fe36b82e6c9d82fb0f1423674a6864fa3f3eab06e9b65ed0de47db43056]G": {
       "counted": {
-       "CCX": 6421959,
-       "CX": 7179962,
+       "CCX": 5084254,
+       "CX": 7419482,
        "SWAP": 256,
-       "X": 2238906
+       "X": 2116540
       },
       "expanded": {
-       "X": 2238906,
-       "CX": 7179962,
-       "CCX": 6421959,
+       "X": 2116540,
+       "CX": 7419482,
+       "CCX": 5084254,
        "SWAP": 256
       }
      },
      "[0x85f184e0b464c554f675299b0c83e786d1711cbd2106119ec40d31b5397a762c]G": {
       "counted": {
-       "CCX": 6421951,
-       "CX": 7180442,
+       "CCX": 5084246,
+       "CX": 7419962,
        "SWAP": 256,
-       "X": 2239102
+       "X": 2116736
       },
       "expanded": {
-       "X": 2239102,
-       "CX": 7180442,
-       "CCX": 6421951,
+       "X": 2116736,
+       "CX": 7419962,
+       "CCX": 5084246,
        "SWAP": 256
       }
      },
      "[2]G": {
       "counted": {
-       "CCX": 6421971,
-       "CX": 7180133,
+       "CCX": 5084266,
+       "CX": 7419653,
        "SWAP": 256,
-       "X": 2239018
+       "X": 2116652
       },
       "expanded": {
-       "X": 2239018,
-       "CX": 7180133,
-       "CCX": 6421971,
+       "X": 2116652,
+       "CX": 7419653,
+       "CCX": 5084266,
        "SWAP": 256
       }
      },
      "[4]G": {
       "counted": {
-       "CCX": 6421967,
-       "CX": 7179947,
+       "CCX": 5084262,
+       "CX": 7419467,
        "SWAP": 256,
-       "X": 2239096
+       "X": 2116730
       },
       "expanded": {
-       "X": 2239096,
-       "CX": 7179947,
-       "CCX": 6421967,
+       "X": 2116730,
+       "CX": 7419467,
+       "CCX": 5084262,
        "SWAP": 256
       }
      },
      "[6]G": {
       "counted": {
-       "CCX": 6421939,
-       "CX": 7180138,
+       "CCX": 5084234,
+       "CX": 7419658,
        "SWAP": 256,
-       "X": 2239014
+       "X": 2116648
       },
       "expanded": {
-       "X": 2239014,
-       "CX": 7180138,
-       "CCX": 6421939,
+       "X": 2116648,
+       "CX": 7419658,
+       "CCX": 5084234,
        "SWAP": 256
       }
      },
      "[8]G": {
       "counted": {
-       "CCX": 6421971,
-       "CX": 7180337,
+       "CCX": 5084266,
+       "CX": 7419857,
        "SWAP": 256,
-       "X": 2238958
+       "X": 2116592
       },
       "expanded": {
-       "X": 2238958,
-       "CX": 7180337,
-       "CCX": 6421971,
+       "X": 2116592,
+       "CX": 7419857,
+       "CCX": 5084266,
        "SWAP": 256
       }
      },
      "[0x6bad6be28e7aa6e99f19950499dd251de512148239292d22e255accb1a46688d]G": {
       "counted": {
-       "CCX": 6421947,
-       "CX": 7180324,
+       "CCX": 5084242,
+       "CX": 7419844,
        "SWAP": 256,
-       "X": 2238910
+       "X": 2116544
       },
       "expanded": {
-       "X": 2238910,
-       "CX": 7180324,
-       "CCX": 6421947,
+       "X": 2116544,
+       "CX": 7419844,
+       "CCX": 5084242,
        "SWAP": 256
       }
      },
      "[0x14aa4e719d3c7dec00a61f933d6c51e370eb9a0a96263ae6c5e818fac0433cc6]G": {
       "counted": {
-       "CCX": 6421943,
-       "CX": 7180727,
+       "CCX": 5084238,
+       "CX": 7420247,
        "SWAP": 256,
-       "X": 2238956
+       "X": 2116590
       },
       "expanded": {
-       "X": 2238956,
-       "CX": 7180727,
-       "CCX": 6421943,
+       "X": 2116590,
+       "CX": 7420247,
+       "CCX": 5084238,
        "SWAP": 256
       }
      },
      "[0x59001ac9406329bc65b00a2d35d148805071950eadec6f117d836e77af67d46a]G": {
       "counted": {
-       "CCX": 6421919,
-       "CX": 7180289,
+       "CCX": 5084214,
+       "CX": 7419809,
        "SWAP": 256,
-       "X": 2238960
+       "X": 2116594
       },
       "expanded": {
-       "X": 2238960,
-       "CX": 7180289,
-       "CCX": 6421919,
+       "X": 2116594,
+       "CX": 7419809,
+       "CCX": 5084214,
        "SWAP": 256
       }
      },
      "[0x89be9c1c8eb5140f16f4488157241955b91dddd91389b372a341738c837a793e]G": {
       "counted": {
-       "CCX": 6421947,
-       "CX": 7180199,
+       "CCX": 5084242,
+       "CX": 7419719,
        "SWAP": 256,
-       "X": 2238916
+       "X": 2116550
       },
       "expanded": {
-       "X": 2238916,
-       "CX": 7180199,
-       "CCX": 6421947,
+       "X": 2116550,
+       "CX": 7419719,
+       "CCX": 5084242,
        "SWAP": 256
       }
      },
      "[0x7608d9425d111a9d5e6c9992b5fb12e0d9090b89065550964f1a8a1d93d20479]G": {
       "counted": {
-       "CCX": 6421947,
-       "CX": 7180619,
+       "CCX": 5084242,
+       "CX": 7420139,
        "SWAP": 256,
-       "X": 2238910
+       "X": 2116544
       },
       "expanded": {
-       "X": 2238910,
-       "CX": 7180619,
-       "CCX": 6421947,
+       "X": 2116544,
+       "CX": 7420139,
+       "CCX": 5084242,
        "SWAP": 256
       }
      },
      "[0xe01c683e99a46df0dde3a361c0099ebacd73de0081a0ba056ce9da661dcf8855]G": {
       "counted": {
-       "CCX": 6421971,
-       "CX": 7180206,
+       "CCX": 5084266,
+       "CX": 7419726,
        "SWAP": 256,
-       "X": 2239024
+       "X": 2116658
       },
       "expanded": {
-       "X": 2239024,
-       "CX": 7180206,
-       "CCX": 6421971,
+       "X": 2116658,
+       "CX": 7419726,
+       "CCX": 5084266,
        "SWAP": 256
       }
      },
      "[0x93550840067f0cfcce1fd3d9849acfb58350a73f7aac319ffb759e0fed1d9d1f]G": {
       "counted": {
-       "CCX": 6421963,
-       "CX": 7180263,
+       "CCX": 5084258,
+       "CX": 7419783,
        "SWAP": 256,
-       "X": 2239032
+       "X": 2116666
       },
       "expanded": {
-       "X": 2239032,
-       "CX": 7180263,
-       "CCX": 6421963,
+       "X": 2116666,
+       "CX": 7419783,
+       "CCX": 5084258,
        "SWAP": 256
       }
      },
      "[0x2475263c785490146dedc86a9f4fb02bb7a1774f1a42721eaba4c70ee306f0cd]G": {
       "counted": {
-       "CCX": 6421947,
-       "CX": 7180314,
+       "CCX": 5084242,
+       "CX": 7419834,
        "SWAP": 256,
-       "X": 2238826
+       "X": 2116460
       },
       "expanded": {
-       "X": 2238826,
-       "CX": 7180314,
-       "CCX": 6421947,
+       "X": 2116460,
+       "CX": 7419834,
+       "CCX": 5084242,
        "SWAP": 256
       }
      },
      "toy127": {
       "hier_expanded": [
-       12227,
-       4483
+       13701,
+       5017
       ],
       "flat": [
-       12227,
-       4483
+       13701,
+       5017
       ]
      },
      "secp256k1_G_flat": {
       "hier_expanded": {
-       "CCX": 6421963,
-       "CX": 7180448,
+       "CCX": 5084258,
+       "CX": 7419968,
        "SWAP": 256,
-       "X": 2238874
+       "X": 2116508
       },
       "flat": {
-       "X": 2238874,
-       "CX": 7180448,
-       "CCX": 6421963,
+       "X": 2116508,
+       "CX": 7419968,
+       "CCX": 5084258,
        "SWAP": 256
       }
      }
@@ -1601,19 +1601,19 @@
    "title": "limits: wires and hierarchical upload",
    "status": "pass",
    "seconds": 0.0,
-   "note": "2311 of 4096 wires, at most 2311 over 24 addends; hierarchical JSON 33,252,091 bytes for G, at most 33,263,821 over addends, cap 104,857,600",
+   "note": "2347 of 4096 wires, at most 2347 over 24 addends; hierarchical JSON 43,675,030 bytes for G, at most 43,686,760 over addends, cap 104,857,600",
    "evidence": {
-    "num_wires": 2311,
+    "num_wires": 2347,
     "max_wires": 4096,
-    "hier_json_bytes_G": 33252091,
+    "hier_json_bytes_G": 43675030,
     "hier_json_file": "verify-out/accept/emit/secp256k1_G_circuit.hier.json",
     "largest_hier_json_over_addends": {
      "addend": "[0x14aa4e719d3c7dec00a61f933d6c51e370eb9a0a96263ae6c5e818fac0433cc6]G",
-     "bytes": 33263821
+     "bytes": 43686760
     },
     "most_wires_over_addends": {
      "addend": "[1]G",
-     "wires": 2311
+     "wires": 2347
     },
     "max_upload_bytes": 104857600,
     "problems": []
@@ -1636,9 +1636,9 @@
    "title": "run hygiene: no tracked or unignored file changed",
    "status": "pass",
    "seconds": 0.0,
-   "note": "same type, mode and content in all 53 tracked and untracked unignored files before and after",
+   "note": "same type, mode and content in all 56 tracked and untracked unignored files before and after",
    "evidence": {
-    "files": 53,
+    "files": 56,
     "changed": []
    }
   }
