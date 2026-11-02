@@ -77,7 +77,7 @@ class DialogMultiplier:
 
 
 class SquareModQ:
-    """Block (Y, one, W, F_1..F_k, top, V) -> V = Y^2 mod q, Y unchanged, every
+    """Block (Y, one, W, F_1..F_k, top) -> F_k = Y^2 mod q, Y unchanged, every
     other register holding garbage that the inverse block clears.
 
     W = Y^2 as a 2n-bit integer, one partial-product row per bit of Y. Each
@@ -97,13 +97,14 @@ class SquareModQ:
             bounds.append(max((b - (h << n)) + h * c, (1 << n) - 1 + (h - 1) * c))
             assert bounds[-1] < b
         self.widths = [max(n, b.bit_length()) for b in bounds[1:]]
-        self.sizes = [1, 2 * n] + self.widths + [1, n]
+        assert self.widths[-1] == n
+        self.sizes = [1, 2 * n] + self.widths + [1]
         self.block = C.record_shape(lambda *r: self._compute(C, *r), [n] + self.sizes)
 
     def _compute(self, C, Y, one, W, *rest):
         mod = self.mod
         n, c = mod.n, (1 << mod.n) - mod.q
-        folds, top, V = rest[:-2], rest[-2], rest[-1]
+        folds, top = rest[:-1], rest[-1]
         C.x(one[0])
         (zero,) = C.alloc(1)
         # Row i adds Y_i * (1 + 4*Y[i+1:]) * 4^i. Rows below i sum to less than
@@ -124,9 +125,7 @@ class SquareModQ:
                     add(C, hi + pad, span)
                     C.free(pad)
             src = F
-        for a, b in zip(src[:n], V):
-            C.cx(a, b)
-        _reduce(C, V + top, (1 << (n + 1)) - mod.q)
+        _reduce(C, src + top, (1 << (n + 1)) - mod.q)
 
 
 def eq_const_into(C, ctrl, bits, value, target):
@@ -178,7 +177,7 @@ class ControlledPointAdd:
         sq = self._square
         regs = [Yr] + [C.alloc(k) for k in sq.sizes]
         C.apply(sq.block, regs)
-        C.apply(self._modadd_blk, [[gen], regs[-1], Xr], inverse=True)
+        C.apply(self._modadd_blk, [[gen], regs[-2], Xr], inverse=True)
         C.apply(sq.block, regs, inverse=True)
         C.free([w for r in regs[1:] for w in r])
 
