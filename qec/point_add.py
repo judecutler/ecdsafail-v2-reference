@@ -42,8 +42,7 @@ class DialogMultiplier:
 
             def step(g, R, S):
                 g0, g1 = g
-                mod.moddbl(C, S)
-                mod.modadd(C, R, S, ctrl=g0)
+                mod.dbladd(C, R, S, g0)
                 cswap(C, g1, R, S)
 
             self._bezout_step = C.record_shape(step, [2, n, n])
