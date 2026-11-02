@@ -1,0 +1,1646 @@
+{
+ "gate": "pass",
+ "mode": "full",
+ "seed": 2026,
+ "sample": 16,
+ "addends": [
+  "[1]G",
+  "[2]G",
+  "[3]G",
+  "[4]G",
+  "[5]G",
+  "[6]G",
+  "[7]G",
+  "[8]G",
+  "[0xf3f49249dc28ff90a5aec7978306d03bf38b2ffc80a4df5a51c9bc701e7ea422]G",
+  "[0x6bad6be28e7aa6e99f19950499dd251de512148239292d22e255accb1a46688d]G",
+  "[0x7dabe929c4a334bfc6cd75e9bb049a79d7a7a3cc8c3d5f169293de8fc88b287e]G",
+  "[0x14aa4e719d3c7dec00a61f933d6c51e370eb9a0a96263ae6c5e818fac0433cc6]G",
+  "[0xe4163207d094499602f0ee99731c94521919e93ad11745ad498893101c593afe]G",
+  "[0x59001ac9406329bc65b00a2d35d148805071950eadec6f117d836e77af67d46a]G",
+  "[0xbef7e268ffe976ab60581ccace1d62e05b4c8012ede7bd0cffb88309fadb8911]G",
+  "[0x89be9c1c8eb5140f16f4488157241955b91dddd91389b372a341738c837a793e]G",
+  "[0xb766ff10b437bdb5a51149bbe060a72424114258751b4c8349a047dc4ac87fc9]G",
+  "[0x7608d9425d111a9d5e6c9992b5fb12e0d9090b89065550964f1a8a1d93d20479]G",
+  "[0xde0279e17f9ac0988df05f2595f19a51e41686cd66160227173714726c167232]G",
+  "[0xe01c683e99a46df0dde3a361c0099ebacd73de0081a0ba056ce9da661dcf8855]G",
+  "[0x90624fe36b82e6c9d82fb0f1423674a6864fa3f3eab06e9b65ed0de47db43056]G",
+  "[0x93550840067f0cfcce1fd3d9849acfb58350a73f7aac319ffb759e0fed1d9d1f]G",
+  "[0x85f184e0b464c554f675299b0c83e786d1711cbd2106119ec40d31b5397a762c]G",
+  "[0x2475263c785490146dedc86a9f4fb02bb7a1774f1a42721eaba4c70ee306f0cd]G"
+ ],
+ "simulated_addends": [
+  "[1]G",
+  "[2]G",
+  "[3]G",
+  "[4]G",
+  "[5]G",
+  "[6]G",
+  "[7]G",
+  "[8]G",
+  "[0xf3f49249dc28ff90a5aec7978306d03bf38b2ffc80a4df5a51c9bc701e7ea422]G",
+  "[0x6bad6be28e7aa6e99f19950499dd251de512148239292d22e255accb1a46688d]G",
+  "[0x7dabe929c4a334bfc6cd75e9bb049a79d7a7a3cc8c3d5f169293de8fc88b287e]G",
+  "[0x14aa4e719d3c7dec00a61f933d6c51e370eb9a0a96263ae6c5e818fac0433cc6]G",
+  "[0xe4163207d094499602f0ee99731c94521919e93ad11745ad498893101c593afe]G",
+  "[0x59001ac9406329bc65b00a2d35d148805071950eadec6f117d836e77af67d46a]G",
+  "[0xbef7e268ffe976ab60581ccace1d62e05b4c8012ede7bd0cffb88309fadb8911]G",
+  "[0x89be9c1c8eb5140f16f4488157241955b91dddd91389b372a341738c837a793e]G",
+  "[0xb766ff10b437bdb5a51149bbe060a72424114258751b4c8349a047dc4ac87fc9]G",
+  "[0x7608d9425d111a9d5e6c9992b5fb12e0d9090b89065550964f1a8a1d93d20479]G",
+  "[0xde0279e17f9ac0988df05f2595f19a51e41686cd66160227173714726c167232]G",
+  "[0xe01c683e99a46df0dde3a361c0099ebacd73de0081a0ba056ce9da661dcf8855]G",
+  "[0x90624fe36b82e6c9d82fb0f1423674a6864fa3f3eab06e9b65ed0de47db43056]G",
+  "[0x93550840067f0cfcce1fd3d9849acfb58350a73f7aac319ffb759e0fed1d9d1f]G",
+  "[0x85f184e0b464c554f675299b0c83e786d1711cbd2106119ec40d31b5397a762c]G",
+  "[0x2475263c785490146dedc86a9f4fb02bb7a1774f1a42721eaba4c70ee306f0cd]G"
+ ],
+ "git_head": "6c79f0289a74dcca2b17070385ceae7c0074afab",
+ "python": "3.13.18",
+ "seconds": 254.3,
+ "counts": {
+  "pass": 13,
+  "pending": 1
+ },
+ "failed": [],
+ "pending": [
+  "I7.charge"
+ ],
+ "not_run_in_quick_mode": [],
+ "coverage": {
+  "model_primes": 13,
+  "toy_instances": 36,
+  "toy_lanes": 25800,
+  "components": 49,
+  "component_lanes": 8951,
+  "mutation_trials": 200,
+  "mutations_caught_at_least": 163,
+  "secp_special_points": 6
+ },
+ "results": [
+  {
+   "id": "I1",
+   "title": "interface: layout and wire count",
+   "status": "pass",
+   "seconds": 79.3,
+   "note": "control=[0], x=1..n, y=n+1..2n at n=7, n=256 and all 24 built addends; 2311 wires, at most 2311 over addends (reference 2311, cap 4096)",
+   "evidence": {
+    "toy127": {
+     "n": 7,
+     "num_wires": 70,
+     "file": "verify-out/accept/emit/toy127_circuit.json"
+    },
+    "secp256k1_G.hier": {
+     "n": 256,
+     "num_wires": 2311,
+     "file": "verify-out/accept/emit/secp256k1_G_circuit.hier.json"
+    },
+    "addend_wires": {
+     "[1]G": 2311,
+     "[2]G": 2311,
+     "[3]G": 2311,
+     "[4]G": 2311,
+     "[5]G": 2311,
+     "[6]G": 2311,
+     "[7]G": 2311,
+     "[8]G": 2311,
+     "[0xf3f49249dc28ff90a5aec7978306d03bf38b2ffc80a4df5a51c9bc701e7ea422]G": 2311,
+     "[0x6bad6be28e7aa6e99f19950499dd251de512148239292d22e255accb1a46688d]G": 2311,
+     "[0x7dabe929c4a334bfc6cd75e9bb049a79d7a7a3cc8c3d5f169293de8fc88b287e]G": 2311,
+     "[0x14aa4e719d3c7dec00a61f933d6c51e370eb9a0a96263ae6c5e818fac0433cc6]G": 2311,
+     "[0xe4163207d094499602f0ee99731c94521919e93ad11745ad498893101c593afe]G": 2311,
+     "[0x59001ac9406329bc65b00a2d35d148805071950eadec6f117d836e77af67d46a]G": 2311,
+     "[0xbef7e268ffe976ab60581ccace1d62e05b4c8012ede7bd0cffb88309fadb8911]G": 2311,
+     "[0x89be9c1c8eb5140f16f4488157241955b91dddd91389b372a341738c837a793e]G": 2311,
+     "[0xb766ff10b437bdb5a51149bbe060a72424114258751b4c8349a047dc4ac87fc9]G": 2311,
+     "[0x7608d9425d111a9d5e6c9992b5fb12e0d9090b89065550964f1a8a1d93d20479]G": 2311,
+     "[0xde0279e17f9ac0988df05f2595f19a51e41686cd66160227173714726c167232]G": 2311,
+     "[0xe01c683e99a46df0dde3a361c0099ebacd73de0081a0ba056ce9da661dcf8855]G": 2311,
+     "[0x90624fe36b82e6c9d82fb0f1423674a6864fa3f3eab06e9b65ed0de47db43056]G": 2311,
+     "[0x93550840067f0cfcce1fd3d9849acfb58350a73f7aac319ffb759e0fed1d9d1f]G": 2311,
+     "[0x85f184e0b464c554f675299b0c83e786d1711cbd2106119ec40d31b5397a762c]G": 2311,
+     "[0x2475263c785490146dedc86a9f4fb02bb7a1774f1a42721eaba4c70ee306f0cd]G": 2311
+    },
+    "max_wires": 4096,
+    "reference_wires": 2311,
+    "problems": []
+   }
+  },
+  {
+   "id": "I2.model",
+   "title": "exactness: classical dialog model and iteration bound",
+   "status": "pass",
+   "seconds": 0.0,
+   "note": "13 primes: Euclid trace and width schedule exhaustive over x, worst run within bound, multiplier model right on every pair tried; secp256k1 bound 512, 2000 random products",
+   "evidence": {
+    "exit": 0,
+    "rows": [
+     {
+      "q": 3,
+      "worst_iterations": 3,
+      "bound": 3,
+      "width_schedule_ok": true,
+      "multiplier_ok": true
+     },
+     {
+      "q": 5,
+      "worst_iterations": 5,
+      "bound": 5,
+      "width_schedule_ok": true,
+      "multiplier_ok": true
+     },
+     {
+      "q": 7,
+      "worst_iterations": 5,
+      "bound": 6,
+      "width_schedule_ok": true,
+      "multiplier_ok": true
+     },
+     {
+      "q": 11,
+      "worst_iterations": 7,
+      "bound": 7,
+      "width_schedule_ok": true,
+      "multiplier_ok": true
+     },
+     {
+      "q": 13,
+      "worst_iterations": 7,
+      "bound": 8,
+      "width_schedule_ok": true,
+      "multiplier_ok": true
+     },
+     {
+      "q": 31,
+      "worst_iterations": 9,
+      "bound": 10,
+      "width_schedule_ok": true,
+      "multiplier_ok": true
+     },
+     {
+      "q": 43,
+      "worst_iterations": 11,
+      "bound": 11,
+      "width_schedule_ok": true,
+      "multiplier_ok": true
+     },
+     {
+      "q": 61,
+      "worst_iterations": 11,
+      "bound": 12,
+      "width_schedule_ok": true,
+      "multiplier_ok": true
+     },
+     {
+      "q": 127,
+      "worst_iterations": 13,
+      "bound": 14,
+      "width_schedule_ok": true,
+      "multiplier_ok": true
+     },
+     {
+      "q": 251,
+      "worst_iterations": 15,
+      "bound": 16,
+      "width_schedule_ok": true,
+      "multiplier_ok": true
+     },
+     {
+      "q": 509,
+      "worst_iterations": 17,
+      "bound": 18,
+      "width_schedule_ok": true,
+      "multiplier_ok": true
+     },
+     {
+      "q": 1021,
+      "worst_iterations": 19,
+      "bound": 20,
+      "width_schedule_ok": true,
+      "multiplier_ok": true
+     },
+     {
+      "q": 4093,
+      "worst_iterations": 23,
+      "bound": 24,
+      "width_schedule_ok": true,
+      "multiplier_ok": true
+     },
+     {
+      "q": "secp256k1",
+      "bound": 512,
+      "random_pairs": 2000,
+      "multiplier_ok": true
+     }
+    ],
+    "failing": [],
+    "log": "verify-out/accept/logs/model.log"
+   }
+  },
+  {
+   "id": "I2.toy",
+   "title": "exactness: exhaustive gate-level check on toy curves and the emitted toy file",
+   "status": "pass",
+   "seconds": 0.1,
+   "note": "36 toy instances, 25800 lanes, 0 failures (flat circuit, every point, c in {0,1}); emitted verify-out/accept/emit/toy127_circuit.json: 254 lanes, 0 failures",
+   "evidence": {
+    "exit": 0,
+    "instances": 36,
+    "lanes": 25800,
+    "failures": 0,
+    "log": "verify-out/accept/logs/toy.log",
+    "problems": [],
+    "first_failures": [],
+    "emitted_file": {
+     "file": "verify-out/accept/emit/toy127_circuit.json",
+     "lanes": 254,
+     "failures": 0,
+     "first_failures": []
+    }
+   }
+  },
+  {
+   "id": "I2.toy-hier",
+   "title": "exactness: same check on the hierarchical upload",
+   "status": "pass",
+   "seconds": 0.0,
+   "note": "36 toy instances, 25800 lanes, 0 failures (hierarchical emission expanded by qec/flatten.py's rules); emitted verify-out/accept/emit/toy127_circuit.hier.json: 254 lanes, 0 failures",
+   "evidence": {
+    "exit": 0,
+    "instances": 36,
+    "lanes": 25800,
+    "failures": 0,
+    "log": "verify-out/accept/logs/toy-hier.log",
+    "problems": [],
+    "first_failures": [],
+    "emitted_file": {
+     "file": "verify-out/accept/emit/toy127_circuit.hier.json",
+     "lanes": 254,
+     "failures": 0,
+     "first_failures": []
+    }
+   }
+  },
+  {
+   "id": "I2.components",
+   "title": "exactness: 256-bit components on boundary inputs",
+   "status": "pass",
+   "seconds": 0.0,
+   "note": "49 256-bit components on boundary inputs, 8951 lanes, failing: none",
+   "evidence": {
+    "exit": 0,
+    "components": 49,
+    "lanes": 8951,
+    "failing": [],
+    "log": "verify-out/accept/logs/components.log"
+   }
+  },
+  {
+   "id": "I2.mutation",
+   "title": "exactness: the checker rejects mutated circuits",
+   "status": "pass",
+   "seconds": 0.0,
+   "note": "173 of 200 CCX-to-CX demotions caught at the fixed seed, at least 163 required",
+   "evidence": {
+    "exit": 0,
+    "q": 127,
+    "addend": [
+     3,
+     62
+    ],
+    "mutation": "one CCX demoted to CX",
+    "trials": 200,
+    "caught": 173,
+    "required": 163,
+    "log": "verify-out/accept/logs/mutation.log"
+   }
+  },
+  {
+   "id": "I2.secp",
+   "title": "exactness: 256-bit hierarchical upload on exceptional and random points",
+   "status": "pass",
+   "seconds": 174.8,
+   "note": "hierarchical upload expanded by flatten's rules at 24 addends incl. G, 252 lanes each (inf, A, -A, -2A, 2A, 3A and 120 random R, c in {0,1}); 0 failures",
+   "evidence": {
+    "addends": [
+     "[1]G",
+     "[2]G",
+     "[3]G",
+     "[4]G",
+     "[5]G",
+     "[6]G",
+     "[7]G",
+     "[8]G",
+     "[0xf3f49249dc28ff90a5aec7978306d03bf38b2ffc80a4df5a51c9bc701e7ea422]G",
+     "[0x6bad6be28e7aa6e99f19950499dd251de512148239292d22e255accb1a46688d]G",
+     "[0x7dabe929c4a334bfc6cd75e9bb049a79d7a7a3cc8c3d5f169293de8fc88b287e]G",
+     "[0x14aa4e719d3c7dec00a61f933d6c51e370eb9a0a96263ae6c5e818fac0433cc6]G",
+     "[0xe4163207d094499602f0ee99731c94521919e93ad11745ad498893101c593afe]G",
+     "[0x59001ac9406329bc65b00a2d35d148805071950eadec6f117d836e77af67d46a]G",
+     "[0xbef7e268ffe976ab60581ccace1d62e05b4c8012ede7bd0cffb88309fadb8911]G",
+     "[0x89be9c1c8eb5140f16f4488157241955b91dddd91389b372a341738c837a793e]G",
+     "[0xb766ff10b437bdb5a51149bbe060a72424114258751b4c8349a047dc4ac87fc9]G",
+     "[0x7608d9425d111a9d5e6c9992b5fb12e0d9090b89065550964f1a8a1d93d20479]G",
+     "[0xde0279e17f9ac0988df05f2595f19a51e41686cd66160227173714726c167232]G",
+     "[0xe01c683e99a46df0dde3a361c0099ebacd73de0081a0ba056ce9da661dcf8855]G",
+     "[0x90624fe36b82e6c9d82fb0f1423674a6864fa3f3eab06e9b65ed0de47db43056]G",
+     "[0x93550840067f0cfcce1fd3d9849acfb58350a73f7aac319ffb759e0fed1d9d1f]G",
+     "[0x85f184e0b464c554f675299b0c83e786d1711cbd2106119ec40d31b5397a762c]G",
+     "[0x2475263c785490146dedc86a9f4fb02bb7a1774f1a42721eaba4c70ee306f0cd]G"
+    ],
+    "lanes_per_addend": 252,
+    "failing": {},
+    "problems": [],
+    "logs": [
+     "verify-out/accept/logs/secp-hier-0.log",
+     "verify-out/accept/logs/secp-hier-1.log"
+    ],
+    "first_failures": {}
+   }
+  },
+  {
+   "id": "I2.secp-flat",
+   "title": "exactness: 256-bit flat circuit at G",
+   "status": "pass",
+   "seconds": 0.0,
+   "note": "252 lanes at A = G incl. inf, A, -A, -2A, 2A, 3A; 0 failures",
+   "evidence": {
+    "exit": 0,
+    "receipt": {
+     "mode": "SAMPLED_256",
+     "q": "0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2f",
+     "addend": "secp256k1 G",
+     "n": 256,
+     "wires": 2311,
+     "ops": 15841541,
+     "counts": {
+      "X": 2238874,
+      "CX": 7180448,
+      "CCX": 6421963,
+      "SWAP": 256
+     },
+     "lanes": 252,
+     "special_cases": [
+      "inf",
+      "A",
+      "-A",
+      "-2A",
+      "2A",
+      "3A"
+     ],
+     "failures": 0,
+     "first_failures": [],
+     "build_seconds": 42.0,
+     "sim_seconds": 7.2
+    },
+    "lanes_expected": 252,
+    "problems": [],
+    "log": "verify-out/accept/logs/secp-flat.log"
+   }
+  },
+  {
+   "id": "I3",
+   "title": "gate set: X, CX, CCX, SWAP only",
+   "status": "pass",
+   "seconds": 0.0,
+   "note": "only X, CX, CCX, SWAP, no measurement or reset, in emitted toy and 256-bit JSON, 24 built addends, every toy instance, 24 expanded 256-bit uploads, and the 256-bit flat build",
+   "evidence": {
+    "toy127": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "toy127.hier": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "secp256k1_G.hier": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[1]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[2]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[3]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[4]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[5]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[6]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[7]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[8]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[0xf3f49249dc28ff90a5aec7978306d03bf38b2ffc80a4df5a51c9bc701e7ea422]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[0x6bad6be28e7aa6e99f19950499dd251de512148239292d22e255accb1a46688d]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[0x7dabe929c4a334bfc6cd75e9bb049a79d7a7a3cc8c3d5f169293de8fc88b287e]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[0x14aa4e719d3c7dec00a61f933d6c51e370eb9a0a96263ae6c5e818fac0433cc6]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[0xe4163207d094499602f0ee99731c94521919e93ad11745ad498893101c593afe]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[0x59001ac9406329bc65b00a2d35d148805071950eadec6f117d836e77af67d46a]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[0xbef7e268ffe976ab60581ccace1d62e05b4c8012ede7bd0cffb88309fadb8911]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[0x89be9c1c8eb5140f16f4488157241955b91dddd91389b372a341738c837a793e]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[0xb766ff10b437bdb5a51149bbe060a72424114258751b4c8349a047dc4ac87fc9]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[0x7608d9425d111a9d5e6c9992b5fb12e0d9090b89065550964f1a8a1d93d20479]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[0xde0279e17f9ac0988df05f2595f19a51e41686cd66160227173714726c167232]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[0xe01c683e99a46df0dde3a361c0099ebacd73de0081a0ba056ce9da661dcf8855]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[0x90624fe36b82e6c9d82fb0f1423674a6864fa3f3eab06e9b65ed0de47db43056]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[0x93550840067f0cfcce1fd3d9849acfb58350a73f7aac319ffb759e0fed1d9d1f]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[0x85f184e0b464c554f675299b0c83e786d1711cbd2106119ec40d31b5397a762c]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "[0x2475263c785490146dedc86a9f4fb02bb7a1774f1a42721eaba4c70ee306f0cd]G": [
+     "CCX",
+     "CX",
+     "SWAP",
+     "X"
+    ],
+    "toy_instances_counted": 36,
+    "secp256k1_flat_counts": {
+     "X": 2238874,
+     "CX": 7180448,
+     "CCX": 6421963,
+     "SWAP": 256
+    },
+    "problems": []
+   }
+  },
+  {
+   "id": "I5",
+   "title": "addend independence of definitions",
+   "status": "pass",
+   "seconds": 0.0,
+   "note": "all 261 definitions identical over 25 builds; A reaches only the top level",
+   "evidence": {
+    "addends": [
+     "G via scripts/emit.py",
+     "[1]G",
+     "[2]G",
+     "[3]G",
+     "[4]G",
+     "[5]G",
+     "[6]G",
+     "[7]G",
+     "[8]G",
+     "[0xf3f49249dc28ff90a5aec7978306d03bf38b2ffc80a4df5a51c9bc701e7ea422]G",
+     "[0x6bad6be28e7aa6e99f19950499dd251de512148239292d22e255accb1a46688d]G",
+     "[0x7dabe929c4a334bfc6cd75e9bb049a79d7a7a3cc8c3d5f169293de8fc88b287e]G",
+     "[0x14aa4e719d3c7dec00a61f933d6c51e370eb9a0a96263ae6c5e818fac0433cc6]G",
+     "[0xe4163207d094499602f0ee99731c94521919e93ad11745ad498893101c593afe]G",
+     "[0x59001ac9406329bc65b00a2d35d148805071950eadec6f117d836e77af67d46a]G",
+     "[0xbef7e268ffe976ab60581ccace1d62e05b4c8012ede7bd0cffb88309fadb8911]G",
+     "[0x89be9c1c8eb5140f16f4488157241955b91dddd91389b372a341738c837a793e]G",
+     "[0xb766ff10b437bdb5a51149bbe060a72424114258751b4c8349a047dc4ac87fc9]G",
+     "[0x7608d9425d111a9d5e6c9992b5fb12e0d9090b89065550964f1a8a1d93d20479]G",
+     "[0xde0279e17f9ac0988df05f2595f19a51e41686cd66160227173714726c167232]G",
+     "[0xe01c683e99a46df0dde3a361c0099ebacd73de0081a0ba056ce9da661dcf8855]G",
+     "[0x90624fe36b82e6c9d82fb0f1423674a6864fa3f3eab06e9b65ed0de47db43056]G",
+     "[0x93550840067f0cfcce1fd3d9849acfb58350a73f7aac319ffb759e0fed1d9d1f]G",
+     "[0x85f184e0b464c554f675299b0c83e786d1711cbd2106119ec40d31b5397a762c]G",
+     "[0x2475263c785490146dedc86a9f4fb02bb7a1774f1a42721eaba4c70ee306f0cd]G"
+    ],
+    "definitions": 261,
+    "digest_of_definitions": "a226294bbac272289c3a8d4c8078c49e889e223886b4a56c9bcaba750c3c3281",
+    "top_level_ccx": {
+     "G via scripts/emit.py": 18123,
+     "[1]G": 18123,
+     "[2]G": 18131,
+     "[3]G": 18131,
+     "[4]G": 18127,
+     "[5]G": 18119,
+     "[6]G": 18099,
+     "[7]G": 18127,
+     "[8]G": 18131,
+     "[0xf3f49249dc28ff90a5aec7978306d03bf38b2ffc80a4df5a51c9bc701e7ea422]G": 18119,
+     "[0x6bad6be28e7aa6e99f19950499dd251de512148239292d22e255accb1a46688d]G": 18107,
+     "[0x7dabe929c4a334bfc6cd75e9bb049a79d7a7a3cc8c3d5f169293de8fc88b287e]G": 18095,
+     "[0x14aa4e719d3c7dec00a61f933d6c51e370eb9a0a96263ae6c5e818fac0433cc6]G": 18103,
+     "[0xe4163207d094499602f0ee99731c94521919e93ad11745ad498893101c593afe]G": 18123,
+     "[0x59001ac9406329bc65b00a2d35d148805071950eadec6f117d836e77af67d46a]G": 18079,
+     "[0xbef7e268ffe976ab60581ccace1d62e05b4c8012ede7bd0cffb88309fadb8911]G": 18123,
+     "[0x89be9c1c8eb5140f16f4488157241955b91dddd91389b372a341738c837a793e]G": 18107,
+     "[0xb766ff10b437bdb5a51149bbe060a72424114258751b4c8349a047dc4ac87fc9]G": 18123,
+     "[0x7608d9425d111a9d5e6c9992b5fb12e0d9090b89065550964f1a8a1d93d20479]G": 18107,
+     "[0xde0279e17f9ac0988df05f2595f19a51e41686cd66160227173714726c167232]G": 18131,
+     "[0xe01c683e99a46df0dde3a361c0099ebacd73de0081a0ba056ce9da661dcf8855]G": 18131,
+     "[0x90624fe36b82e6c9d82fb0f1423674a6864fa3f3eab06e9b65ed0de47db43056]G": 18119,
+     "[0x93550840067f0cfcce1fd3d9849acfb58350a73f7aac319ffb759e0fed1d9d1f]G": 18123,
+     "[0x85f184e0b464c554f675299b0c83e786d1711cbd2106119ec40d31b5397a762c]G": 18111,
+     "[0x2475263c785490146dedc86a9f4fb02bb7a1774f1a42721eaba4c70ee306f0cd]G": 18107
+    },
+    "differences": []
+   }
+  },
+  {
+   "id": "I6",
+   "title": "cost at G and sample statistics over addends (report)",
+   "status": "pass",
+   "seconds": 0.0,
+   "note": "G: 6,421,963 CCX, T 44,953,741, 15,841,541 ops, 2311 wires; sample of 24 addends: max T 44,953,797 (-5,512,192 vs reference 50,465,989), min T 44,953,433; counts match 24 expanded uploads",
+   "evidence": {
+    "t_per_ccx": 7,
+    "seed": 2026,
+    "random_addends": 16,
+    "per_addend": {
+     "[1]G": {
+      "num_wires": 2311,
+      "bytes": 33252091,
+      "gates": {
+       "CCX": 6421963,
+       "CX": 7180448,
+       "SWAP": 256,
+       "X": 2238874
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841541,
+      "ccx": 6421963,
+      "t": 44953741,
+      "top_ops": 37917,
+      "top_ccx": 18123,
+      "definitions": 261
+     },
+     "[2]G": {
+      "num_wires": 2311,
+      "bytes": 33243660,
+      "gates": {
+       "CCX": 6421971,
+       "CX": 7180133,
+       "SWAP": 256,
+       "X": 2239018
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841378,
+      "ccx": 6421971,
+      "t": 44953797,
+      "top_ops": 37754,
+      "top_ccx": 18131,
+      "definitions": 261
+     },
+     "[3]G": {
+      "num_wires": 2311,
+      "bytes": 33251478,
+      "gates": {
+       "CCX": 6421971,
+       "CX": 7180302,
+       "SWAP": 256,
+       "X": 2239070
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841599,
+      "ccx": 6421971,
+      "t": 44953797,
+      "top_ops": 37975,
+      "top_ccx": 18131,
+      "definitions": 261
+     },
+     "[4]G": {
+      "num_wires": 2311,
+      "bytes": 33238018,
+      "gates": {
+       "CCX": 6421967,
+       "CX": 7179947,
+       "SWAP": 256,
+       "X": 2239096
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841266,
+      "ccx": 6421967,
+      "t": 44953769,
+      "top_ops": 37642,
+      "top_ccx": 18127,
+      "definitions": 261
+     },
+     "[5]G": {
+      "num_wires": 2311,
+      "bytes": 33246215,
+      "gates": {
+       "CCX": 6421959,
+       "CX": 7180230,
+       "SWAP": 256,
+       "X": 2238992
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841437,
+      "ccx": 6421959,
+      "t": 44953713,
+      "top_ops": 37813,
+      "top_ccx": 18119,
+      "definitions": 261
+     },
+     "[6]G": {
+      "num_wires": 2311,
+      "bytes": 33241942,
+      "gates": {
+       "CCX": 6421939,
+       "CX": 7180138,
+       "SWAP": 256,
+       "X": 2239014
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841347,
+      "ccx": 6421939,
+      "t": 44953573,
+      "top_ops": 37723,
+      "top_ccx": 18099,
+      "definitions": 261
+     },
+     "[7]G": {
+      "num_wires": 2311,
+      "bytes": 33257764,
+      "gates": {
+       "CCX": 6421967,
+       "CX": 7180621,
+       "SWAP": 256,
+       "X": 2238820
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841664,
+      "ccx": 6421967,
+      "t": 44953769,
+      "top_ops": 38040,
+      "top_ccx": 18127,
+      "definitions": 261
+     },
+     "[8]G": {
+      "num_wires": 2311,
+      "bytes": 33250139,
+      "gates": {
+       "CCX": 6421971,
+       "CX": 7180337,
+       "SWAP": 256,
+       "X": 2238958
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841522,
+      "ccx": 6421971,
+      "t": 44953797,
+      "top_ops": 37898,
+      "top_ccx": 18131,
+      "definitions": 261
+     },
+     "[0xf3f49249dc28ff90a5aec7978306d03bf38b2ffc80a4df5a51c9bc701e7ea422]G": {
+      "num_wires": 2311,
+      "bytes": 33254617,
+      "gates": {
+       "CCX": 6421959,
+       "CX": 7180459,
+       "SWAP": 256,
+       "X": 2238972
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841646,
+      "ccx": 6421959,
+      "t": 44953713,
+      "top_ops": 38022,
+      "top_ccx": 18119,
+      "definitions": 261
+     },
+     "[0x6bad6be28e7aa6e99f19950499dd251de512148239292d22e255accb1a46688d]G": {
+      "num_wires": 2311,
+      "bytes": 33247201,
+      "gates": {
+       "CCX": 6421947,
+       "CX": 7180324,
+       "SWAP": 256,
+       "X": 2238910
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841437,
+      "ccx": 6421947,
+      "t": 44953629,
+      "top_ops": 37813,
+      "top_ccx": 18107,
+      "definitions": 261
+     },
+     "[0x7dabe929c4a334bfc6cd75e9bb049a79d7a7a3cc8c3d5f169293de8fc88b287e]G": {
+      "num_wires": 2311,
+      "bytes": 33242607,
+      "gates": {
+       "CCX": 6421935,
+       "CX": 7180200,
+       "SWAP": 256,
+       "X": 2238948
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841339,
+      "ccx": 6421935,
+      "t": 44953545,
+      "top_ops": 37715,
+      "top_ccx": 18095,
+      "definitions": 261
+     },
+     "[0x14aa4e719d3c7dec00a61f933d6c51e370eb9a0a96263ae6c5e818fac0433cc6]G": {
+      "num_wires": 2311,
+      "bytes": 33263821,
+      "gates": {
+       "CCX": 6421943,
+       "CX": 7180727,
+       "SWAP": 256,
+       "X": 2238956
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841882,
+      "ccx": 6421943,
+      "t": 44953601,
+      "top_ops": 38258,
+      "top_ccx": 18103,
+      "definitions": 261
+     },
+     "[0xe4163207d094499602f0ee99731c94521919e93ad11745ad498893101c593afe]G": {
+      "num_wires": 2311,
+      "bytes": 33255755,
+      "gates": {
+       "CCX": 6421963,
+       "CX": 7180481,
+       "SWAP": 256,
+       "X": 2238974
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841674,
+      "ccx": 6421963,
+      "t": 44953741,
+      "top_ops": 38050,
+      "top_ccx": 18123,
+      "definitions": 261
+     },
+     "[0x59001ac9406329bc65b00a2d35d148805071950eadec6f117d836e77af67d46a]G": {
+      "num_wires": 2311,
+      "bytes": 33245542,
+      "gates": {
+       "CCX": 6421919,
+       "CX": 7180289,
+       "SWAP": 256,
+       "X": 2238960
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841424,
+      "ccx": 6421919,
+      "t": 44953433,
+      "top_ops": 37800,
+      "top_ccx": 18079,
+      "definitions": 261
+     },
+     "[0xbef7e268ffe976ab60581ccace1d62e05b4c8012ede7bd0cffb88309fadb8911]G": {
+      "num_wires": 2311,
+      "bytes": 33230807,
+      "gates": {
+       "CCX": 6421963,
+       "CX": 7179863,
+       "SWAP": 256,
+       "X": 2238942
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841024,
+      "ccx": 6421963,
+      "t": 44953741,
+      "top_ops": 37400,
+      "top_ccx": 18123,
+      "definitions": 261
+     },
+     "[0x89be9c1c8eb5140f16f4488157241955b91dddd91389b372a341738c837a793e]G": {
+      "num_wires": 2311,
+      "bytes": 33242491,
+      "gates": {
+       "CCX": 6421947,
+       "CX": 7180199,
+       "SWAP": 256,
+       "X": 2238916
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841318,
+      "ccx": 6421947,
+      "t": 44953629,
+      "top_ops": 37694,
+      "top_ccx": 18107,
+      "definitions": 261
+     },
+     "[0xb766ff10b437bdb5a51149bbe060a72424114258751b4c8349a047dc4ac87fc9]G": {
+      "num_wires": 2311,
+      "bytes": 33248801,
+      "gates": {
+       "CCX": 6421963,
+       "CX": 7180385,
+       "SWAP": 256,
+       "X": 2238840
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841444,
+      "ccx": 6421963,
+      "t": 44953741,
+      "top_ops": 37820,
+      "top_ccx": 18123,
+      "definitions": 261
+     },
+     "[0x7608d9425d111a9d5e6c9992b5fb12e0d9090b89065550964f1a8a1d93d20479]G": {
+      "num_wires": 2311,
+      "bytes": 33258627,
+      "gates": {
+       "CCX": 6421947,
+       "CX": 7180619,
+       "SWAP": 256,
+       "X": 2238910
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841732,
+      "ccx": 6421947,
+      "t": 44953629,
+      "top_ops": 38108,
+      "top_ccx": 18107,
+      "definitions": 261
+     },
+     "[0xde0279e17f9ac0988df05f2595f19a51e41686cd66160227173714726c167232]G": {
+      "num_wires": 2311,
+      "bytes": 33260755,
+      "gates": {
+       "CCX": 6421971,
+       "CX": 7180665,
+       "SWAP": 256,
+       "X": 2238862
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841754,
+      "ccx": 6421971,
+      "t": 44953797,
+      "top_ops": 38130,
+      "top_ccx": 18131,
+      "definitions": 261
+     },
+     "[0xe01c683e99a46df0dde3a361c0099ebacd73de0081a0ba056ce9da661dcf8855]G": {
+      "num_wires": 2311,
+      "bytes": 33246606,
+      "gates": {
+       "CCX": 6421971,
+       "CX": 7180206,
+       "SWAP": 256,
+       "X": 2239024
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841457,
+      "ccx": 6421971,
+      "t": 44953797,
+      "top_ops": 37833,
+      "top_ccx": 18131,
+      "definitions": 261
+     },
+     "[0x90624fe36b82e6c9d82fb0f1423674a6864fa3f3eab06e9b65ed0de47db43056]G": {
+      "num_wires": 2311,
+      "bytes": 33233676,
+      "gates": {
+       "CCX": 6421959,
+       "CX": 7179962,
+       "SWAP": 256,
+       "X": 2238906
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841083,
+      "ccx": 6421959,
+      "t": 44953713,
+      "top_ops": 37459,
+      "top_ccx": 18119,
+      "definitions": 261
+     },
+     "[0x93550840067f0cfcce1fd3d9849acfb58350a73f7aac319ffb759e0fed1d9d1f]G": {
+      "num_wires": 2311,
+      "bytes": 33248565,
+      "gates": {
+       "CCX": 6421963,
+       "CX": 7180263,
+       "SWAP": 256,
+       "X": 2239032
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841514,
+      "ccx": 6421963,
+      "t": 44953741,
+      "top_ops": 37890,
+      "top_ccx": 18123,
+      "definitions": 261
+     },
+     "[0x85f184e0b464c554f675299b0c83e786d1711cbd2106119ec40d31b5397a762c]G": {
+      "num_wires": 2311,
+      "bytes": 33256561,
+      "gates": {
+       "CCX": 6421951,
+       "CX": 7180442,
+       "SWAP": 256,
+       "X": 2239102
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841751,
+      "ccx": 6421951,
+      "t": 44953657,
+      "top_ops": 38127,
+      "top_ccx": 18111,
+      "definitions": 261
+     },
+     "[0x2475263c785490146dedc86a9f4fb02bb7a1774f1a42721eaba4c70ee306f0cd]G": {
+      "num_wires": 2311,
+      "bytes": 33244785,
+      "gates": {
+       "CCX": 6421947,
+       "CX": 7180314,
+       "SWAP": 256,
+       "X": 2238826
+      },
+      "gate_names_seen": [
+       "CCX",
+       "CX",
+       "SWAP",
+       "X"
+      ],
+      "ops": 15841343,
+      "ccx": 6421947,
+      "t": 44953629,
+      "top_ops": 37719,
+      "top_ccx": 18107,
+      "definitions": 261
+     }
+    },
+    "sample_max": {
+     "addend": "[2]G",
+     "num_wires": 2311,
+     "bytes": 33243660,
+     "gates": {
+      "CCX": 6421971,
+      "CX": 7180133,
+      "SWAP": 256,
+      "X": 2239018
+     },
+     "gate_names_seen": [
+      "CCX",
+      "CX",
+      "SWAP",
+      "X"
+     ],
+     "ops": 15841378,
+     "ccx": 6421971,
+     "t": 44953797,
+     "top_ops": 37754,
+     "top_ccx": 18131,
+     "definitions": 261
+    },
+    "sample_min": {
+     "addend": "[0x59001ac9406329bc65b00a2d35d148805071950eadec6f117d836e77af67d46a]G",
+     "num_wires": 2311,
+     "bytes": 33245542,
+     "gates": {
+      "CCX": 6421919,
+      "CX": 7180289,
+      "SWAP": 256,
+      "X": 2238960
+     },
+     "gate_names_seen": [
+      "CCX",
+      "CX",
+      "SWAP",
+      "X"
+     ],
+     "ops": 15841424,
+     "ccx": 6421919,
+     "t": 44953433,
+     "top_ops": 37800,
+     "top_ccx": 18079,
+     "definitions": 261
+    },
+    "reference_sample_max_t": 50465989,
+    "sample_max_t_delta_vs_reference": -5512192,
+    "count_cross_checks": {
+     "[1]G": {
+      "counted": {
+       "CCX": 6421963,
+       "CX": 7180448,
+       "SWAP": 256,
+       "X": 2238874
+      },
+      "expanded": {
+       "X": 2238874,
+       "CX": 7180448,
+       "CCX": 6421963,
+       "SWAP": 256
+      }
+     },
+     "[3]G": {
+      "counted": {
+       "CCX": 6421971,
+       "CX": 7180302,
+       "SWAP": 256,
+       "X": 2239070
+      },
+      "expanded": {
+       "X": 2239070,
+       "CX": 7180302,
+       "CCX": 6421971,
+       "SWAP": 256
+      }
+     },
+     "[5]G": {
+      "counted": {
+       "CCX": 6421959,
+       "CX": 7180230,
+       "SWAP": 256,
+       "X": 2238992
+      },
+      "expanded": {
+       "X": 2238992,
+       "CX": 7180230,
+       "CCX": 6421959,
+       "SWAP": 256
+      }
+     },
+     "[7]G": {
+      "counted": {
+       "CCX": 6421967,
+       "CX": 7180621,
+       "SWAP": 256,
+       "X": 2238820
+      },
+      "expanded": {
+       "X": 2238820,
+       "CX": 7180621,
+       "CCX": 6421967,
+       "SWAP": 256
+      }
+     },
+     "[0xf3f49249dc28ff90a5aec7978306d03bf38b2ffc80a4df5a51c9bc701e7ea422]G": {
+      "counted": {
+       "CCX": 6421959,
+       "CX": 7180459,
+       "SWAP": 256,
+       "X": 2238972
+      },
+      "expanded": {
+       "X": 2238972,
+       "CX": 7180459,
+       "CCX": 6421959,
+       "SWAP": 256
+      }
+     },
+     "[0x7dabe929c4a334bfc6cd75e9bb049a79d7a7a3cc8c3d5f169293de8fc88b287e]G": {
+      "counted": {
+       "CCX": 6421935,
+       "CX": 7180200,
+       "SWAP": 256,
+       "X": 2238948
+      },
+      "expanded": {
+       "X": 2238948,
+       "CX": 7180200,
+       "CCX": 6421935,
+       "SWAP": 256
+      }
+     },
+     "[0xe4163207d094499602f0ee99731c94521919e93ad11745ad498893101c593afe]G": {
+      "counted": {
+       "CCX": 6421963,
+       "CX": 7180481,
+       "SWAP": 256,
+       "X": 2238974
+      },
+      "expanded": {
+       "X": 2238974,
+       "CX": 7180481,
+       "CCX": 6421963,
+       "SWAP": 256
+      }
+     },
+     "[0xbef7e268ffe976ab60581ccace1d62e05b4c8012ede7bd0cffb88309fadb8911]G": {
+      "counted": {
+       "CCX": 6421963,
+       "CX": 7179863,
+       "SWAP": 256,
+       "X": 2238942
+      },
+      "expanded": {
+       "X": 2238942,
+       "CX": 7179863,
+       "CCX": 6421963,
+       "SWAP": 256
+      }
+     },
+     "[0xb766ff10b437bdb5a51149bbe060a72424114258751b4c8349a047dc4ac87fc9]G": {
+      "counted": {
+       "CCX": 6421963,
+       "CX": 7180385,
+       "SWAP": 256,
+       "X": 2238840
+      },
+      "expanded": {
+       "X": 2238840,
+       "CX": 7180385,
+       "CCX": 6421963,
+       "SWAP": 256
+      }
+     },
+     "[0xde0279e17f9ac0988df05f2595f19a51e41686cd66160227173714726c167232]G": {
+      "counted": {
+       "CCX": 6421971,
+       "CX": 7180665,
+       "SWAP": 256,
+       "X": 2238862
+      },
+      "expanded": {
+       "X": 2238862,
+       "CX": 7180665,
+       "CCX": 6421971,
+       "SWAP": 256
+      }
+     },
+     "[0x90624fe36b82e6c9d82fb0f1423674a6864fa3f3eab06e9b65ed0de47db43056]G": {
+      "counted": {
+       "CCX": 6421959,
+       "CX": 7179962,
+       "SWAP": 256,
+       "X": 2238906
+      },
+      "expanded": {
+       "X": 2238906,
+       "CX": 7179962,
+       "CCX": 6421959,
+       "SWAP": 256
+      }
+     },
+     "[0x85f184e0b464c554f675299b0c83e786d1711cbd2106119ec40d31b5397a762c]G": {
+      "counted": {
+       "CCX": 6421951,
+       "CX": 7180442,
+       "SWAP": 256,
+       "X": 2239102
+      },
+      "expanded": {
+       "X": 2239102,
+       "CX": 7180442,
+       "CCX": 6421951,
+       "SWAP": 256
+      }
+     },
+     "[2]G": {
+      "counted": {
+       "CCX": 6421971,
+       "CX": 7180133,
+       "SWAP": 256,
+       "X": 2239018
+      },
+      "expanded": {
+       "X": 2239018,
+       "CX": 7180133,
+       "CCX": 6421971,
+       "SWAP": 256
+      }
+     },
+     "[4]G": {
+      "counted": {
+       "CCX": 6421967,
+       "CX": 7179947,
+       "SWAP": 256,
+       "X": 2239096
+      },
+      "expanded": {
+       "X": 2239096,
+       "CX": 7179947,
+       "CCX": 6421967,
+       "SWAP": 256
+      }
+     },
+     "[6]G": {
+      "counted": {
+       "CCX": 6421939,
+       "CX": 7180138,
+       "SWAP": 256,
+       "X": 2239014
+      },
+      "expanded": {
+       "X": 2239014,
+       "CX": 7180138,
+       "CCX": 6421939,
+       "SWAP": 256
+      }
+     },
+     "[8]G": {
+      "counted": {
+       "CCX": 6421971,
+       "CX": 7180337,
+       "SWAP": 256,
+       "X": 2238958
+      },
+      "expanded": {
+       "X": 2238958,
+       "CX": 7180337,
+       "CCX": 6421971,
+       "SWAP": 256
+      }
+     },
+     "[0x6bad6be28e7aa6e99f19950499dd251de512148239292d22e255accb1a46688d]G": {
+      "counted": {
+       "CCX": 6421947,
+       "CX": 7180324,
+       "SWAP": 256,
+       "X": 2238910
+      },
+      "expanded": {
+       "X": 2238910,
+       "CX": 7180324,
+       "CCX": 6421947,
+       "SWAP": 256
+      }
+     },
+     "[0x14aa4e719d3c7dec00a61f933d6c51e370eb9a0a96263ae6c5e818fac0433cc6]G": {
+      "counted": {
+       "CCX": 6421943,
+       "CX": 7180727,
+       "SWAP": 256,
+       "X": 2238956
+      },
+      "expanded": {
+       "X": 2238956,
+       "CX": 7180727,
+       "CCX": 6421943,
+       "SWAP": 256
+      }
+     },
+     "[0x59001ac9406329bc65b00a2d35d148805071950eadec6f117d836e77af67d46a]G": {
+      "counted": {
+       "CCX": 6421919,
+       "CX": 7180289,
+       "SWAP": 256,
+       "X": 2238960
+      },
+      "expanded": {
+       "X": 2238960,
+       "CX": 7180289,
+       "CCX": 6421919,
+       "SWAP": 256
+      }
+     },
+     "[0x89be9c1c8eb5140f16f4488157241955b91dddd91389b372a341738c837a793e]G": {
+      "counted": {
+       "CCX": 6421947,
+       "CX": 7180199,
+       "SWAP": 256,
+       "X": 2238916
+      },
+      "expanded": {
+       "X": 2238916,
+       "CX": 7180199,
+       "CCX": 6421947,
+       "SWAP": 256
+      }
+     },
+     "[0x7608d9425d111a9d5e6c9992b5fb12e0d9090b89065550964f1a8a1d93d20479]G": {
+      "counted": {
+       "CCX": 6421947,
+       "CX": 7180619,
+       "SWAP": 256,
+       "X": 2238910
+      },
+      "expanded": {
+       "X": 2238910,
+       "CX": 7180619,
+       "CCX": 6421947,
+       "SWAP": 256
+      }
+     },
+     "[0xe01c683e99a46df0dde3a361c0099ebacd73de0081a0ba056ce9da661dcf8855]G": {
+      "counted": {
+       "CCX": 6421971,
+       "CX": 7180206,
+       "SWAP": 256,
+       "X": 2239024
+      },
+      "expanded": {
+       "X": 2239024,
+       "CX": 7180206,
+       "CCX": 6421971,
+       "SWAP": 256
+      }
+     },
+     "[0x93550840067f0cfcce1fd3d9849acfb58350a73f7aac319ffb759e0fed1d9d1f]G": {
+      "counted": {
+       "CCX": 6421963,
+       "CX": 7180263,
+       "SWAP": 256,
+       "X": 2239032
+      },
+      "expanded": {
+       "X": 2239032,
+       "CX": 7180263,
+       "CCX": 6421963,
+       "SWAP": 256
+      }
+     },
+     "[0x2475263c785490146dedc86a9f4fb02bb7a1774f1a42721eaba4c70ee306f0cd]G": {
+      "counted": {
+       "CCX": 6421947,
+       "CX": 7180314,
+       "SWAP": 256,
+       "X": 2238826
+      },
+      "expanded": {
+       "X": 2238826,
+       "CX": 7180314,
+       "CCX": 6421947,
+       "SWAP": 256
+      }
+     },
+     "toy127": {
+      "hier_expanded": [
+       12227,
+       4483
+      ],
+      "flat": [
+       12227,
+       4483
+      ]
+     },
+     "secp256k1_G_flat": {
+      "hier_expanded": {
+       "CCX": 6421963,
+       "CX": 7180448,
+       "SWAP": 256,
+       "X": 2238874
+      },
+      "flat": {
+       "X": 2238874,
+       "CX": 7180448,
+       "CCX": 6421963,
+       "SWAP": 256
+      }
+     }
+    },
+    "problems": []
+   }
+  },
+  {
+   "id": "I7",
+   "title": "limits: wires and hierarchical upload",
+   "status": "pass",
+   "seconds": 0.0,
+   "note": "2311 of 4096 wires, at most 2311 over 24 addends; hierarchical JSON 33,252,091 bytes for G, at most 33,263,821 over addends, cap 104,857,600",
+   "evidence": {
+    "num_wires": 2311,
+    "max_wires": 4096,
+    "hier_json_bytes_G": 33252091,
+    "hier_json_file": "verify-out/accept/emit/secp256k1_G_circuit.hier.json",
+    "largest_hier_json_over_addends": {
+     "addend": "[0x14aa4e719d3c7dec00a61f933d6c51e370eb9a0a96263ae6c5e818fac0433cc6]G",
+     "bytes": 33263821
+    },
+    "most_wires_over_addends": {
+     "addend": "[1]G",
+     "wires": 2311
+    },
+    "max_upload_bytes": 104857600,
+    "problems": []
+   }
+  },
+  {
+   "id": "I7.charge",
+   "title": "limits: benchmark charge",
+   "status": "pending",
+   "seconds": 0.0,
+   "note": "needs the published benchmark: its charge formula is not public yet",
+   "evidence": {
+    "reason": "needs the published benchmark",
+    "limit_as_reported": 33610176,
+    "this_repo_as_reported": 19492771
+   }
+  },
+  {
+   "id": "R1",
+   "title": "run hygiene: no tracked or unignored file changed",
+   "status": "pass",
+   "seconds": 0.0,
+   "note": "same type, mode and content in all 53 tracked and untracked unignored files before and after",
+   "evidence": {
+    "files": 53,
+    "changed": []
+   }
+  }
+ ]
+}
