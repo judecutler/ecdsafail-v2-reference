@@ -1,7 +1,7 @@
 """Exact, complete, controlled fixed-addend point addition:
 |c>|R>|0> -> |c>|R + c*A>|0> for every R in E(F_q) encoded as little-endian
 affine (x, y) with infinity = (0, 0)."""
-from .arith import Mod, cswap, gt_into, load_const, sub
+from .arith import Mod, _reduce, add, cswap, gt_into, load_const, sub
 from .builder import Circuit
 from .curve import Curve
 from .model import iteration_bound, width_schedule
@@ -76,6 +76,59 @@ class DialogMultiplier:
         self.C.apply(self.block, [Xr, Yr], inverse)
 
 
+class SquareModQ:
+    """Block (Y, one, W, F_1..F_k, top, V) -> V = Y^2 mod q, Y unchanged, every
+    other register holding garbage that the inverse block clears.
+
+    W = Y^2 as a 2n-bit integer, one partial-product row per bit of Y. Each
+    fold F_j = F_{j-1}[:n] + F_{j-1}[n:] * c, with c = 2^n - q, keeps the value
+    mod q and shrinks its bound; folding stops once the bound is below 2^n, so
+    one conditional subtract of q makes it canonical. The bounds are exact
+    integer maxima computed here, so no register can overflow."""
+
+    def __init__(self, C, mod):
+        self.mod = mod
+        n, q = mod.n, mod.q
+        c = (1 << n) - q
+        bounds = [(q - 1) ** 2]
+        while bounds[-1] >> n:
+            b = bounds[-1]
+            h = b >> n
+            bounds.append(max((b - (h << n)) + h * c, (1 << n) - 1 + (h - 1) * c))
+            assert bounds[-1] < b
+        self.widths = [max(n, b.bit_length()) for b in bounds[1:]]
+        self.sizes = [1, 2 * n] + self.widths + [1, n]
+        self.block = C.record_shape(lambda *r: self._compute(C, *r), [n] + self.sizes)
+
+    def _compute(self, C, Y, one, W, *rest):
+        mod = self.mod
+        n, c = mod.n, (1 << mod.n) - mod.q
+        folds, top, V = rest[:-2], rest[-2], rest[-1]
+        C.x(one[0])
+        (zero,) = C.alloc(1)
+        # Row i adds Y_i * (1 + 4*Y[i+1:]) * 4^i. Rows below i sum to less than
+        # 2^(n+i+1), so the carry out lands in a bit that is still 0.
+        for i in range(n):
+            last = n + i + 1 >= 2 * n
+            add(C, one + [zero] + Y[i + 1:], W[2 * i:n + i + 1], cout=None if last else W[n + i + 1], ctrl=Y[i])
+        C.free([zero])
+        src = W
+        for F in folds:
+            for lo, f in zip(src[:n], F):
+                C.cx(lo, f)
+            hi = src[n:]
+            for s in range(c.bit_length()):
+                if c >> s & 1:
+                    span = F[s:]
+                    pad = C.alloc(len(span) - len(hi))
+                    add(C, hi + pad, span)
+                    C.free(pad)
+            src = F
+        for a, b in zip(src[:n], V):
+            C.cx(a, b)
+        _reduce(C, V + top, (1 << (n + 1)) - mod.q)
+
+
 def eq_const_into(C, ctrl, bits, value, target):
     """target ^= ctrl AND [bits == value]."""
     flips = [w for i, w in enumerate(bits) if not value >> i & 1]
@@ -115,26 +168,19 @@ class ControlledPointAdd:
         assert len(set(enc)) == 4, "addend order must exceed 3"
 
     def _mulsub(self, gen, Yr, Xr):
-        """X = X - gen * Y^2 mod q, Y untouched."""
+        """X = X - gen * Y^2 mod q, Y untouched. Y^2 is built as an integer,
+        folded below 2^n with 2^n = c mod q, reduced once, subtracted with one
+        controlled modular subtract, then the whole computation is undone."""
         C, mod, n = self.C, self.mod, self.n
-        T = C.alloc(n)
-        for y, t in zip(Yr, T):
-            C.cx(y, t)
         if self._modadd_blk is None:
             self._modadd_blk = C.record_shape(lambda k, a, b: mod.modadd(C, a, b, ctrl=k[0]), [1, n, n])
-            self._dbl = C.record_shape(lambda s: mod.moddbl(C, s), [n])
-        for i in range(n):
-            (k,) = C.alloc(1)
-            C.ccx(gen, Yr[i], k)
-            C.apply(self._modadd_blk, [[k], T, Xr], inverse=True)
-            C.ccx(gen, Yr[i], k)
-            C.free([k])
-            C.apply(self._dbl, [T])
-        for _ in range(n):
-            C.apply(self._dbl, [T], inverse=True)
-        for y, t in zip(Yr, T):
-            C.cx(y, t)
-        C.free(T)
+            self._square = SquareModQ(C, mod)
+        sq = self._square
+        regs = [Yr] + [C.alloc(k) for k in sq.sizes]
+        C.apply(sq.block, regs)
+        C.apply(self._modadd_blk, [[gen], regs[-1], Xr], inverse=True)
+        C.apply(sq.block, regs, inverse=True)
+        C.free([w for r in regs[1:] for w in r])
 
     def _kernel(self, gen, Xr, Yr):
         C, mod, q = self.C, self.mod, self.curve.q
