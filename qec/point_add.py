@@ -27,11 +27,7 @@ class DialogMultiplier:
             def step(U, V, g):
                 g0, g1 = g
                 C.cx(V[0], g0)
-                (t,) = C.alloc(1)
-                gt_into(C, U[:w], V[:w], t)
-                C.ccx(g0, t, g1)
-                gt_into(C, U[:w], V[:w], t)
-                C.free([t])
+                gt_into(C, U[:w], V[:w], g1, ctrl=g0)
                 cswap(C, g1, U[:w], V[:w])
                 sub(C, U[:w], V[:w], ctrl=g0)
                 V[:] = V[1:] + V[:1]
