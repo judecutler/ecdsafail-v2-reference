@@ -223,6 +223,125 @@ class Mod:
         _reduce(C, s, self._wrap() >> 1)
         s[:] = s[-1:] + s[:-1]
 
+    def dbladd(self, C, R, S, ctrl):
+        """S = (2S + ctrl*R) mod q, for S < q and R < q.
+
+        T = 2S + ctrl*R < 3q is built as an (n+2)-bit integer and reduced by
+        kappa*q, kappa = floor(T/q) in {0, 1, 2}, in one pass. With
+        c = 2^n - q and K = bitlen(2c), T >= q and T >= 2q are the carries out
+        of T + c and T + 2c. Below bit K those carries are two short chains;
+        above it both need the same run of ones in T, held once in Q. The
+        flags k1 = [kappa >= 1], k2 = [kappa = 2] are cleared by parity and
+        one controlled comparison against R."""
+        n, q = self.n, self.q
+        c = (1 << n) - q
+        K = (2 * c).bit_length()
+        m = n - K
+        z, top = C.alloc(2)
+        T = [z] + S + [top]
+        L, h0, h1 = T[:n], T[n], T[n + 1]
+        (zero,) = C.alloc(1)
+        add(C, R + [zero], T[:n + 1], cout=top, ctrl=ctrl)
+        C.free([zero])
+
+        A = _carries(C, T[:K + 1], c)
+        B = _carries(C, T[:K + 1], 2 * c)
+        Q = [None]
+        for j in range(m):
+            if Q[j] is None:
+                Q.append(L[K + j])
+            else:
+                (w,) = C.alloc(1)
+                C.ccx(Q[j], L[K + j], w)
+                Q.append(w)
+
+        def and_into(a, b, t):
+            if b is None:
+                C.cx(a, t)
+            else:
+                C.ccx(a, b, t)
+
+        k1, k2, g, nz = C.alloc(4)
+        # k1 = [T >= q] = h0 | h1 | (carry of L + c); k2 = [T >= 2q] = h1 | h0 & (carry of L + 2c).
+        C.cx(h0, k1)
+        C.cx(h1, k1)
+        C.x(h0)
+        C.x(h1)
+        C.ccx(h0, h1, nz)
+        and_into(A[K], Q[m], g)
+        C.ccx(nz, g, k1)
+        and_into(A[K], Q[m], g)
+        C.ccx(h0, h1, nz)
+        C.x(h0)
+        C.x(h1)
+        C.cx(h1, k2)
+        and_into(B[K], Q[m], g)
+        C.ccx(h0, g, k2)
+        and_into(B[K], Q[m], g)
+        C.free([nz])
+
+        # k1 becomes [kappa = 1]; add kappa*c below bit K, carry cin into the run of ones above.
+        C.cx(k2, k1)
+        cin = g
+        C.ccx(k1, A[K], cin)
+        C.ccx(k2, B[K], cin)
+        (u,) = C.alloc(1)
+        and_into(cin, Q[m], u)
+        C.ccx(h0, u, h1)
+        C.cx(u, h0)
+        and_into(cin, Q[m], u)
+        C.free([u])
+        # (T + kappa*c) >> n = kappa, so the top two bits now spell kappa.
+        C.cx(k1, h0)
+        C.cx(k2, h1)
+        for j in reversed(range(m)):
+            if Q[j] is None:
+                C.cx(cin, L[K + j])
+            else:
+                C.ccx(cin, Q[j], L[K + j])
+        # Q[j+1] = Q[j] & old L[K+j], and old L[K+j] = new L[K+j] ^ cin wherever Q[j] = 1.
+        for w in L[K:]:
+            C.cx(cin, w)
+        for j in reversed(range(1, m)):
+            C.ccx(Q[j], L[K + j], Q[j + 1])
+            C.free([Q[j + 1]])
+        for w in L[K:]:
+            C.cx(cin, w)
+        C.ccx(k1, A[K], cin)
+        C.ccx(k2, B[K], cin)
+        for i in reversed(range(K)):
+            _uncarry(C, T, c, A, i + 1)
+            _uncarry(C, T, 2 * c, B, i + 1)
+            if A[i] is not None:
+                C.ccx(k1, A[i], L[i])
+            if B[i] is not None:
+                C.ccx(k2, B[i], L[i])
+            if c >> i & 1:
+                C.cx(k1, L[i])
+            if (2 * c) >> i & 1:
+                C.cx(k2, L[i])
+        C.cx(k2, k1)
+
+        # kappa is odd iff r_0 != ctrl*R_0. kappa = 2 iff k1 and kappa even, and
+        # then also iff ctrl and R > r, since r = 2S + R - 2q < R exactly then.
+        p = cin
+        C.cx(L[0], p)
+        C.ccx(ctrl, R[0], p)
+        C.x(p)
+        C.ccx(k1, p, k2)
+        C.x(p)
+        C.cx(p, k1)
+        (mk,) = C.alloc(1)
+        C.x(p)
+        C.ccx(ctrl, p, mk)
+        gt_into(C, R, L, k1, ctrl=mk)
+        C.ccx(ctrl, p, mk)
+        C.x(p)
+        C.ccx(ctrl, R[0], p)
+        C.cx(L[0], p)
+        C.free([mk, p, k1, k2, h0, h1])
+        S[:] = L
+
     def cmodadd_const(self, C, ctrl, value, b):
         """b = (b + ctrl*value) mod q."""
         value %= self.q
