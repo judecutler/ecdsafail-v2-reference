@@ -1,0 +1,8 @@
+id	hypothesis	change	before	after	delta	tests	verdict	note
+B0	baseline	none (upstream 9801ee6)	-	1555x2411322=3749605710 T=50198575	-	toy3 green	baseline	frozen harness .audit/measure.py
+A1	Bezout-tick knobs incl WIDE_P=3	WIDE_P=3,RAMP=1,P_FAN=24	3749605710	3732269684	-0.46%	toy green	reverted	WIDE_P=3 raised peak 1555->1573, net qt loss
+A2	wire-neutral Bezout-tick knobs	WIDE_ADD_RAMP 2->1, P_FAN 8->24	3749605710	3716949155	-0.87%	toy green	KEPT	no wire change; T 50262919 under cap
+A3	gate_pass post-pass on emitted circuit	cancel_pairs+order_controls+prune	2390321	2383727 ticks	-0.28%	n/a	noted	depth_pass already applied at emit; small residual
+A4	Euclid RING_BORROW 300/450/600	point_add.RING_BORROW	2390321	2390321	0%	n/a	reverted	inert; Euclid steps already take max ring (tree_temps cap)
+C1	knob descent on standalone tick	COPIES=128,TREE_F cap32,TREE_B(2,1.8),M=5,P_FAN=64	1556x1695337 raw	1604x1734154	+5.4% qt	toy green	reverted	standalone tick is a wrong proxy: in-context period got worse; need chained steady-state harness
+D1	faithful knob descent (real _bezout_pass + emit depth_pass), 13 knobs incl. copies/trees/prefix/codec	none accepted	1245.9/tick, 972 pass wires	same	0%	n/a	no change	aodhfionn knobs are at a local optimum under the faithful proxy
